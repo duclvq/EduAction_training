@@ -80,3 +80,22 @@ Training results saved to `./work_dir/eduaction/mgsan_<config>/`:
 - `log.txt` - Training log
 - `config.yaml` - Config backup
 - `epoch*_each_class_acc.csv` - Per-class accuracy
+
+## Visualization
+
+After training, generate visualizations:
+
+```bash
+python visualize_results.py \
+  --config ./config/eduaction/default.yaml \
+  --weights ./work_dir/eduaction/mgsan_joint/runs-100-1234.pt \
+  --output-dir ./visualization_results
+```
+
+**Generated files:**
+- `confusion_matrix.png` - Confusion matrix (counts + normalized)
+- `per_class_metrics.png` - Precision, Recall, F1 per class
+- `class_accuracy.png` - Per-class accuracy bar chart
+- `prediction_distribution.png` - Actual vs Predicted distribution
+- `confidence_distribution.png` - Model confidence analysis
+- `evaluation_report.txt` - Full text report
