@@ -1,0 +1,72 @@
+[
+  {
+    "name": "cosine_lr",
+    "description": "Cosine scheduler",
+    "params": {
+      "learning_rate": 0.001,
+      "scheduler": "cosine",
+      "filters": 16,
+      "frame_length": 30
+    },
+    "best_accuracy": 0.6842105388641357,
+    "final_accuracy": 0.6842105388641357,
+    "epochs_trained": 25,
+    "timestamp": "2025-10-13 23:11:04"
+  },
+  {
+    "name": "higher_lr",
+    "description": "Higher learning rate",
+    "params": {
+      "learning_rate": 0.005,
+      "scheduler": "cosine",
+      "filters": 16,
+      "frame_length": 30
+    },
+    "best_accuracy": 0.6491228342056274,
+    "final_accuracy": 0.6491228342056274,
+    "epochs_trained": 25,
+    "timestamp": "2025-10-13 23:11:15"
+  },
+  {
+    "name": "more_filters",
+    "description": "More filters",
+    "params": {
+      "learning_rate": 0.001,
+      "scheduler": "cosine",
+      "filters": 32,
+      "frame_length": 30
+    },
+    "best_accuracy": 0.5964912176132202,
+    "final_accuracy": 0.5964912176132202,
+    "epochs_trained": 15,
+    "timestamp": "2025-10-13 23:11:24"
+  },
+  {
+    "name": "baseline",
+    "description": "Default configuration",
+    "params": {
+      "learning_rate": 0.001,
+      "scheduler": "plateau",
+      "filters": 16,
+      "frame_length": 30
+    },
+    "best_accuracy": 0.5087719559669495,
+    "final_accuracy": 0.5087719559669495,
+    "epochs_trained": 13,
+    "timestamp": "2025-10-13 23:10:53"
+  },
+  {
+    "name": "shorter_frames",
+    "description": "Shorter sequences",
+    "params": {
+      "learning_rate": 0.001,
+      "scheduler": "cosine",
+      "filters": 16,
+      "frame_length": 20
+    },
+    "best_accuracy": 0.3684210479259491,
+    "final_accuracy": 0.35087719559669495,
+    "epochs_trained": 11,
+    "timestamp": "2025-10-13 23:11:34"
+  }
+]

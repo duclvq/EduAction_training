@@ -1,0 +1,5 @@
+{
+  "best_params": {
+    "learning_rate": 0.0007792297153882995,
+    "scheduler": "cosine",
+    "filters": 

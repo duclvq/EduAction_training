@@ -1,0 +1,92 @@
+[
+  {
+    "trial": 4,
+    "learning_rate": 0.0010974434632290556,
+    "scheduler": "cosine",
+    "filters": 41,
+    "frame_length": 52,
+    "accuracy": 0.6842105388641357,
+    "timestamp": "2025-10-14 00:56:40"
+  },
+  {
+    "trial": 6,
+    "learning_rate": 0.0006402741563576111,
+    "scheduler": "cosine",
+    "filters": 32,
+    "frame_length": 39,
+    "accuracy": 0.8070175647735596,
+    "timestamp": "2025-10-14 00:57:11"
+  },
+  {
+    "trial": 7,
+    "learning_rate": 0.008820981295186187,
+    "scheduler": "cosine",
+    "filters": 52,
+    "frame_length": 44,
+    "accuracy": 0.6666666865348816,
+    "timestamp": "2025-10-14 00:57:47"
+  },
+  {
+    "trial": 9,
+    "learning_rate": 0.002236680822205837,
+    "scheduler": "plateau",
+    "filters": 50,
+    "frame_length": 18,
+    "accuracy": 0.6666666865348816,
+    "timestamp": "2025-10-14 00:58:15"
+  },
+  {
+    "trial": 13,
+    "learning_rate": 0.0012968814240113056,
+    "scheduler": "cosine",
+    "filters": 34,
+    "frame_length": 40,
+    "accuracy": 0.7719298005104065,
+    "timestamp": "2025-10-14 00:59:02"
+  },
+  {
+    "trial": 14,
+    "learning_rate": 0.0002548764743671979,
+    "scheduler": "cosine",
+    "filters": 60,
+    "frame_length": 40,
+    "accuracy": 0.8421052694320679,
+    "timestamp": "2025-10-14 00:59:37"
+  },
+  {
+    "trial": 19,
+    "learning_rate": 0.0006311345156082897,
+    "scheduler": "cosine",
+    "filters": 20,
+    "frame_length": 44,
+    "accuracy": 0.7368420958518982,
+    "timestamp": "2025-10-14 01:00:21"
+  },
+  {
+    "trial": 22,
+    "learning_rate": 0.0013878862124183811,
+    "scheduler": "cosine",
+    "filters": 8,
+    "frame_length": 40,
+    "accuracy": 0.7017543911933899,
+    "timestamp": "2025-10-14 01:00:48"
+  },
+  {
+    "trial": 24,
+    "learning_rate": 0.000164315282225428,
+    "scheduler": "cosine",
+    "filters": 38,
+    "frame_length": 46,
+    "accuracy": 0.719298243522644,
+    "timestamp": "2025-10-14 01:01:24"
+  },
+  {
+    "trial": 25,
+    "learning_rate": 0.002507296154708588,
+    "scheduler": "cosine",
+    "filters": 55,
+    "frame_length": 38,
+    "accuracy": 0.719298243522644,
+    "timestamp": "2025-10-14 01:02:01"
+  }
+]

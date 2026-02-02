@@ -1,0 +1,236 @@
+{
+  "best_params": {
+    "learning_rate": 0.0002548764743671979,
+    "scheduler": "cosine",
+    "filters": 60,
+    "frame_length": 40
+  },
+  "best_score": 0.8421052694320679,
+  "all_trials": [
+    {
+      "params": {
+        "learning_rate": 3.422077167125085e-05,
+        "scheduler": "cosine_restarts",
+        "filters": 41,
+        "frame_length": 31
+      },
+      "value": 0.0
+    },
+    {
+      "params": {
+        "learning_rate": 0.0003409783329264559,
+        "scheduler": "plateau",
+        "filters": 26,
+        "frame_length": 31
+      },
+      "value": 0.0
+    },
+    {
+      "params": {
+        "learning_rate": 6.457924145459881e-05,
+        "scheduler": "plateau",
+        "filters": 18,
+        "frame_length": 47
+      },
+      "value": 0.0
+    },
+    {
+      "params": {
+        "learning_rate": 0.0010974434632290556,
+        "scheduler": "cosine",
+        "filters": 41,
+        "frame_length": 52
+      },
+      "value": 0.6842105388641357
+    },
+    {
+      "params": {
+        "learning_rate": 2.4025945577150628e-05,
+        "scheduler": "plateau",
+        "filters": 50,
+        "frame_length": 25
+      },
+      "value": 0.0
+    },
+    {
+      "params": {
+        "learning_rate": 0.0006402741563576111,
+        "scheduler": "cosine",
+        "filters": 32,
+        "frame_length": 39
+      },
+      "value": 0.8070175647735596
+    },
+    {
+      "params": {
+        "learning_rate": 0.008820981295186187,
+        "scheduler": "cosine",
+        "filters": 52,
+        "frame_length": 44
+      },
+      "value": 0.6666666865348816
+    },
+    {
+      "params": {
+        "learning_rate": 4.7019240168224804e-05,
+        "scheduler": "cosine_restarts",
+        "filters": 25,
+        "frame_length": 59
+      },
+      "value": 0.0
+    },
+    {
+      "params": {
+        "learning_rate": 0.002236680822205837,
+        "scheduler": "plateau",
+        "filters": 50,
+        "frame_length": 18
+      },
+      "value": 0.6666666865348816
+    },
+    {
+      "params": {
+        "learning_rate": 0.00657566155273257,
+        "scheduler": "plateau",
+        "filters": 47,
+        "frame_length": 55
+      },
+      "value": 0.0
+    },
+    {
+      "params": {
+        "learning_rate": 0.00018736603100077859,
+        "scheduler": "cosine",
+        "filters": 14,
+        "frame_length": 37
+      },
+      "value": 0.0
+    },
+    {
+      "params": {
+        "learning_rate": 0.0008547228531215927,
+        "scheduler": "cosine",
+        "filters": 35,
+        "frame_length": 49
+      },
+      "value": 0.0
+    },
+    {
+      "params": {
+        "learning_rate": 0.0012968814240113056,
+        "scheduler": "cosine",
+        "filters": 34,
+        "frame_length": 40
+      },
+      "value": 0.7719298005104065
+    },
+    {
+      "params": {
+        "learning_rate": 0.0002548764743671979,
+        "scheduler": "cosine",
+        "filters": 60,
+        "frame_length": 40
+      },
+      "value": 0.8421052694320679
+    },
+    {
+      "params": {
+        "learning_rate": 0.00017185435419811207,
+        "scheduler": "cosine",
+        "filters": 60,
+        "frame_length": 35
+      },
+      "value": 0.0
+    },
+    {
+      "params": {
+        "learning_rate": 1.003025754261064e-05,
+        "scheduler": "cosine",
+        "filters": 60,
+        "frame_length": 41
+      },
+      "value": 0.0
+    },
+    {
+      "params": {
+        "learning_rate": 0.00038684605023601147,
+        "scheduler": "cosine",
+        "filters": 64,
+        "frame_length": 25
+      },
+      "value": 0.0
+    },
+    {
+      "params": {
+        "learning_rate": 0.00011269093346446342,
+        "scheduler": "cosine_restarts",
+        "filters": 28,
+        "frame_length": 31
+      },
+      "value": 0.0
+    },
+    {
+      "params": {
+        "learning_rate": 0.0006311345156082897,
+        "scheduler": "cosine",
+        "filters": 20,
+        "frame_length": 44
+      },
+      "value": 0.7368420958518982
+    },
+    {
+      "params": {
+        "learning_rate": 0.0038576697488316744,
+        "scheduler": "cosine",
+        "filters": 43,
+        "frame_length": 25
+      },
+      "value": 0.0
+    },
+    {
+      "params": {
+        "learning_rate": 0.0020467467379995507,
+        "scheduler": "cosine_restarts",
+        "filters": 33,
+        "frame_length": 35
+      },
+      "value": 0.0
+    },
+    {
+      "params": {
+        "learning_rate": 0.0013878862124183811,
+        "scheduler": "cosine",
+        "filters": 8,
+        "frame_length": 40
+      },
+      "value": 0.7017543911933899
+    },
+    {
+      "params": {
+        "learning_rate": 0.0005432828162259662,
+        "scheduler": "cosine",
+        "filters": 31,
+        "frame_length": 41
+      },
+      "value": 0.0
+    },
+    {
+      "params": {
+        "learning_rate": 0.000164315282225428,
+        "scheduler": "cosine",
+        "filters": 38,
+        "frame_length": 46
+      },
+      "value": 0.719298243522644
+    },
+    {
+      "params": {
+        "learning_rate": 0.002507296154708588,
+        "scheduler": "cosine",
+        "filters": 55,
+        "frame_length": 38
+      },
+      "value": 0.719298243522644
+    }
+  ]
+}
