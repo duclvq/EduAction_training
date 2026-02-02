@@ -12,10 +12,11 @@ train_feeder_args:
   p_interval: [0.5, 1]
   random_rot: True
   debug: False
-  train_ratio: 0.8
+  train_ratio: 0.7
   seed: 42
   bone: False
   vel: False
+  keypoint_subset: full_body  # full_body, upper_body, body_only, face_hands, hands_only, body_hands
 
 test_feeder_args:
   data_dir: /mnt/d/data/EduAction_pose_data  # Change this to your data path
@@ -24,10 +25,11 @@ test_feeder_args:
   p_interval: [1]
   random_rot: False
   debug: False
-  train_ratio: 0.8
+  train_ratio: 0.7
   seed: 42
   bone: False
   vel: False
+  keypoint_subset: full_body
 
 # Model configuration
 model: model.MGSAN.Model

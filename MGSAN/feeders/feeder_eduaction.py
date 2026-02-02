@@ -1,6 +1,7 @@
 """
 Feeder for EduAction dataset with 133 keypoints (COCO-WholeBody format)
 Data is stored as individual pickle files per sample in class folders.
+Supports selecting specific body parts via keypoint_subset parameter.
 """
 import os
 import pickle
@@ -20,6 +21,20 @@ if not hasattr(np, '_core'):
     sys.modules['numpy._core._multiarray_umath'] = getattr(_np_core, '_multiarray_umath', _np_core.multiarray)
 
 
+# Keypoint subset definitions for COCO-WholeBody 133 keypoints
+KEYPOINT_SUBSETS = {
+    'full_body': list(range(133)),  # All 133 keypoints
+    'upper_body': list(range(0, 17)) + list(range(23, 133)),  # No feet (127 keypoints)
+    'body_only': list(range(0, 23)),  # Body + feet only (23 keypoints)
+    'body_no_feet': list(range(0, 17)),  # Body only, no feet (17 keypoints)
+    'face_hands': list(range(23, 133)),  # Face + hands (110 keypoints)
+    'hands_only': list(range(91, 133)),  # Both hands (42 keypoints)
+    'body_hands': list(range(0, 23)) + list(range(91, 133)),  # Body + hands (65 keypoints)
+    'upper_body_hands': list(range(0, 11)) + list(range(91, 133)),  # Upper body + hands (53 keypoints)
+    'face_only': list(range(23, 91)),  # Face only (68 keypoints)
+}
+
+
 class FeederEduAction(Dataset):
     def __init__(
         self,
@@ -29,10 +44,11 @@ class FeederEduAction(Dataset):
         p_interval=[0.5, 1],
         random_rot=False,
         debug=False,
-        train_ratio=0.8,
+        train_ratio=0.7,  # 70% train / 30% test (same as DDNet)
         seed=42,
         bone=False,
         vel=False,
+        keypoint_subset='full_body',
     ):
         """
         EduAction dataset feeder.
@@ -48,6 +64,8 @@ class FeederEduAction(Dataset):
             seed: Random seed for train/test split
             bone: Whether to use bone modality
             vel: Whether to use velocity modality
+            keypoint_subset: Which keypoints to use ('full_body', 'upper_body', 'body_only',
+                           'face_hands', 'hands_only', 'body_hands', 'upper_body_hands', 'face_only')
         """
         self.data_dir = data_dir
         self.split = split
@@ -59,6 +77,19 @@ class FeederEduAction(Dataset):
         self.seed = seed
         self.bone = bone
         self.vel = vel
+
+        # Keypoint selection
+        self.keypoint_subset = keypoint_subset
+        if keypoint_subset in KEYPOINT_SUBSETS:
+            self.selected_keypoints = KEYPOINT_SUBSETS[keypoint_subset]
+        elif isinstance(keypoint_subset, list):
+            self.selected_keypoints = keypoint_subset
+        else:
+            print(f"Unknown keypoint_subset: {keypoint_subset}, using full_body")
+            self.selected_keypoints = KEYPOINT_SUBSETS['full_body']
+
+        self.num_keypoints = len(self.selected_keypoints)
+        print(f"Using keypoint subset '{keypoint_subset}': {self.num_keypoints} keypoints")
 
         # Class names
         self.classes = ['drinking', 'lecture', 'play_phone', 'sleeping',
@@ -91,16 +122,31 @@ class FeederEduAction(Dataset):
         # Sort for reproducibility
         all_samples.sort(key=lambda x: x['path'])
 
-        # Split into train/test
-        random.seed(self.seed)
-        random.shuffle(all_samples)
+        # Stratified split (same as DDNet) - ensures balanced class distribution
+        # Group samples by class
+        from collections import defaultdict
+        class_samples = defaultdict(list)
+        for sample in all_samples:
+            class_samples[sample['label']].append(sample)
 
-        n_train = int(len(all_samples) * self.train_ratio)
+        train_samples = []
+        test_samples = []
+
+        random.seed(self.seed)
+        for label, samples_list in class_samples.items():
+            random.shuffle(samples_list)
+            n_train = int(len(samples_list) * self.train_ratio)
+            train_samples.extend(samples_list[:n_train])
+            test_samples.extend(samples_list[n_train:])
+
+        # Shuffle again
+        random.shuffle(train_samples)
+        random.shuffle(test_samples)
 
         if self.split == 'train':
-            samples = all_samples[:n_train]
+            samples = train_samples
         else:
-            samples = all_samples[n_train:]
+            samples = test_samples
 
         if self.debug:
             samples = samples[:100]
@@ -123,9 +169,12 @@ class FeederEduAction(Dataset):
                         kp = frame_data['keypoints']  # (133, 2)
                     else:
                         kp = frame_data  # Already numpy array
+
+                    # Select only the desired keypoints
+                    kp = kp[self.selected_keypoints, :]
                     frames.append(kp)
 
-                data = np.array(frames)  # (T, V, C) = (T, 133, 2)
+                data = np.array(frames)  # (T, V, C) = (T, num_keypoints, 2)
 
                 self.data.append(data)
                 self.label.append(sample['label'])
@@ -141,7 +190,7 @@ class FeederEduAction(Dataset):
         return len(self.label)
 
     def __getitem__(self, index):
-        # Get data: (T, V, C) where V=133, C=2
+        # Get data: (T, V, C) where V=num_keypoints, C=2
         data_numpy = self.data[index].copy()
         label = self.label[index]
 
@@ -237,7 +286,6 @@ class FeederEduAction(Dataset):
 
     def get_bone_data(self, data_numpy):
         """Convert joint data to bone data using skeleton connections."""
-        # Define bone pairs for COCO-WholeBody 133 keypoints
         bone_pairs = self.get_bone_pairs()
 
         C, T, V, M = data_numpy.shape
@@ -250,9 +298,13 @@ class FeederEduAction(Dataset):
         return bone_data
 
     def get_bone_pairs(self):
-        """Define bone pairs for 133 keypoints skeleton."""
-        # Body connections
-        pairs = [
+        """Define bone pairs based on selected keypoints."""
+        # Create mapping from original index to new index
+        idx_map = {orig: new for new, orig in enumerate(self.selected_keypoints)}
+
+        # Full body bone pairs (original indices)
+        all_pairs = [
+            # Body
             (0, 1), (0, 2), (1, 3), (2, 4),  # Head
             (5, 0), (6, 0),  # Shoulders to nose
             (7, 5), (9, 7),  # Left arm
@@ -260,17 +312,22 @@ class FeederEduAction(Dataset):
             (11, 5), (12, 6),  # Hips to shoulders
             (13, 11), (15, 13),  # Left leg
             (14, 12), (16, 14),  # Right leg
+            # Feet
+            (17, 15), (18, 15), (19, 15),  # Left foot
+            (20, 16), (21, 16), (22, 16),  # Right foot
         ]
 
-        # Feet
-        pairs += [(17, 15), (18, 15), (19, 15)]  # Left foot
-        pairs += [(20, 16), (21, 16), (22, 16)]  # Right foot
-
-        # Hands (simplified - connect to wrist)
+        # Hands
         for i in range(91, 112):  # Left hand
-            pairs.append((i, 91 if i != 91 else 9))
+            all_pairs.append((i, 91 if i != 91 else 9))
         for i in range(112, 133):  # Right hand
-            pairs.append((i, 112 if i != 112 else 10))
+            all_pairs.append((i, 112 if i != 112 else 10))
+
+        # Filter pairs to only include selected keypoints and remap indices
+        pairs = []
+        for v1, v2 in all_pairs:
+            if v1 in idx_map and v2 in idx_map:
+                pairs.append((idx_map[v1], idx_map[v2]))
 
         return pairs
 
