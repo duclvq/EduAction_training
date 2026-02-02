@@ -5,10 +5,19 @@ Data is stored as individual pickle files per sample in class folders.
 import os
 import pickle
 import random
+import sys
 import numpy as np
 import torch
 from torch.utils.data import Dataset
 import torch.nn.functional as F
+
+# Fix numpy compatibility for pickle files saved with numpy 2.x
+if not hasattr(np, '_core'):
+    import numpy.core as _np_core
+    sys.modules['numpy._core'] = _np_core
+    sys.modules['numpy._core.multiarray'] = _np_core.multiarray
+    sys.modules['numpy._core.numeric'] = _np_core.numeric
+    sys.modules['numpy._core._multiarray_umath'] = getattr(_np_core, '_multiarray_umath', _np_core.multiarray)
 
 
 class FeederEduAction(Dataset):
