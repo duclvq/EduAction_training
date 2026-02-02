@@ -1,0 +1,7 @@
+MGSAN Evaluation Results
+==================================================
+Config: ./config/cobot/default.yaml
+Weights: ./work_dir/cobot/ctrgcn_joint/runs-97-10282.pt
+Total frames: 5,616
+Correct predictions: 2,185
+Frame-wise Accuracy: 0.3891 (38.91%)

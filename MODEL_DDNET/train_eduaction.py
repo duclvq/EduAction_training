@@ -26,8 +26,8 @@ import math
 # Import from ddnet module
 import sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'ddnet'))
-from ddnet import build_DD_Net, Config
-from utils import zoom, get_CG, sampling_frame
+from MODEL_DDNET.ddnet import build_DD_Net, Config
+from MODEL_DDNET.utils import zoom, get_CG, sampling_frame
 
 # Set random seeds for reproducibility
 random.seed(42)

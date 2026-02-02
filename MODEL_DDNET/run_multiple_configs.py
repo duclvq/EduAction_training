@@ -6,7 +6,7 @@ This script trains models with different keypoint combinations and saves compari
 import os
 import pickle
 import pandas as pd
-from train_eduaction import train_eduaction_model
+from MODEL_DDNET.train_eduaction import train_eduaction_model
 import tensorflow as tf
 
 

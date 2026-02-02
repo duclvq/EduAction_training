@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 # import cv2
 import glob
 import gc
-from utils import *
+from MODEL_DDNET.utils import *
 from tqdm import tqdm
 import pickle
 
