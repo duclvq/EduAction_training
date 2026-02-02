@@ -6,7 +6,7 @@ work_dir: ./work_dir/eduaction/mgsan_joint
 # Feeder configuration
 feeder: feeders.feeder_eduaction.FeederEduAction
 train_feeder_args:
-  data_dir: D:/data/EduAction_pose_data
+  data_dir: /mnt/d/data/EduAction_pose_data  # Change this to your data path
   split: train
   window_size: 64
   p_interval: [0.5, 1]
@@ -18,7 +18,7 @@ train_feeder_args:
   vel: False
 
 test_feeder_args:
-  data_dir: D:/data/EduAction_pose_data
+  data_dir: /mnt/d/data/EduAction_pose_data  # Change this to your data path
   split: test
   window_size: 64
   p_interval: [1]
