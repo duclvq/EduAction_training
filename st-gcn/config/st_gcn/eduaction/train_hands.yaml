@@ -48,4 +48,4 @@ nesterov: True
 device: [0]
 batch_size: 24
 test_batch_size: 24
-num_epoch: 100
+num_epoch: 120

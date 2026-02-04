@@ -48,4 +48,4 @@ nesterov: True
 device: [0]
 batch_size: 32  # Can use larger batch with fewer keypoints
 test_batch_size: 32
-num_epoch: 100
+num_epoch: 120

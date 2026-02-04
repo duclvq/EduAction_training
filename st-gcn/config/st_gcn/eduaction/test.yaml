@@ -41,7 +41,7 @@ weights: ./work_dir/recognition/eduaction/ST_GCN/best_model.pt
 device: [0]
 batch_size: 16
 test_batch_size: 16
-num_epoch: 100
+num_epoch: 120
 
 # evaluation settings
 phase: test
