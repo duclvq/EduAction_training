@@ -1,0 +1,4 @@
+tensor(19),0,3
+tensor(57),1,0
+tensor(64),6,2
+tensor(69),2,6

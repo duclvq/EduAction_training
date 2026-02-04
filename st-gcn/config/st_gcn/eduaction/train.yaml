@@ -1,0 +1,51 @@
+# EduAction Dataset Configuration for ST-GCN
+# 133 keypoints (COCO-WholeBody format) with 2D coordinates
+# Same train/test split as DDNet and MGSAN (70/30, seed=42)
+
+work_dir: ./work_dir/recognition/eduaction/ST_GCN
+
+# feeder - using custom EduAction feeder
+feeder: feeder.feeder_eduaction.FeederEduAction
+train_feeder_args:
+  data_dir: /mnt/d/data/EduAction_pose_data  # Change this to your data path
+  split: train
+  random_choose: True
+  random_move: True
+  window_size: 64
+  debug: False
+  train_ratio: 0.7  # Same as DDNet
+  seed: 42  # Same as DDNet
+  keypoint_subset: full_body  # full_body, body_only, body_hands, etc.
+
+test_feeder_args:
+  data_dir: /mnt/d/data/EduAction_pose_data  # Change this to your data path
+  split: test
+  window_size: 64
+  debug: False
+  train_ratio: 0.7
+  seed: 42
+  keypoint_subset: full_body
+
+# model
+model: net.st_gcn.Model
+model_args:
+  in_channels: 2  # 2D coordinates (x, y)
+  num_class: 7  # 7 classes in EduAction: drinking, lecture, play_phone, sleeping, talking, watch_computer, writing
+  dropout: 0.5
+  edge_importance_weighting: True
+  graph_args:
+    layout: 'eduaction'
+    strategy: 'spatial'
+
+# optimizer
+weight_decay: 0.0001
+base_lr: 0.01
+step: [40, 60, 80]
+optimizer: SGD
+nesterov: True
+
+# training
+device: [0]
+batch_size: 16
+test_batch_size: 16
+num_epoch: 100

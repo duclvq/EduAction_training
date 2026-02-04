@@ -1,0 +1,17 @@
+tensor(3),0,1
+tensor(8),4,1
+tensor(18),4,5
+tensor(20),0,5
+tensor(23),4,1
+tensor(26),5,2
+tensor(32),0,4
+tensor(62),4,0
+tensor(66),4,1
+tensor(67),4,1
+tensor(68),4,1
+tensor(71),5,6
+tensor(81),5,4
+tensor(82),1,4
+tensor(98),4,2
+tensor(101),1,4
+tensor(104),5,6

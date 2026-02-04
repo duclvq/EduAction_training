@@ -1,0 +1,75 @@
+# command line: train_eduaction.py --config ./config/eduaction/body_hands.yaml
+
+base_lr: 0.01
+batch_size: 16
+config: ./config/eduaction/body_hands.yaml
+device:
+- 0
+eval_interval: 5
+feeder: feeders.feeder_eduaction.FeederEduAction
+ignore_weights: []
+log_interval: 100
+lr_decay_rate: 0.1
+model: model.MGSAN.Model
+model_args:
+  Is_joint: true
+  K: 0
+  dropout: 0.1
+  graph: graph.eduaction.GraphEduActionBodyHands
+  graph_args:
+    labeling_mode: spatial
+  in_channels: 2
+  num_class: 7
+  num_person: 1
+  num_point: 65
+model_saved_name: MGSAN
+nesterov: true
+num_epoch: 120
+num_worker: 4
+optimizer: Adam
+phase: train
+print_log: true
+save_epoch: 60
+save_interval: 1
+save_score: false
+seed: 1
+show_topk:
+- 1
+- 5
+start_epoch: 0
+step:
+- 60
+- 80
+- 100
+test_batch_size: 16
+test_feeder_args:
+  bone: false
+  data_dir: /mnt/d/data/EduAction_pose_data
+  debug: false
+  keypoint_subset: body_hands
+  p_interval:
+  - 1
+  random_rot: false
+  seed: 42
+  split: test
+  train_ratio: 0.7
+  vel: false
+  window_size: 64
+train_feeder_args:
+  bone: false
+  data_dir: /mnt/d/data/EduAction_pose_data
+  debug: false
+  keypoint_subset: body_hands
+  p_interval:
+  - 0.5
+  - 1
+  random_rot: true
+  seed: 42
+  split: train
+  train_ratio: 0.7
+  vel: false
+  window_size: 64
+warm_up_epoch: 5
+weight_decay: 0.0004
+weights: null
+work_dir: ./work_dir/eduaction/mgsan_body_hands

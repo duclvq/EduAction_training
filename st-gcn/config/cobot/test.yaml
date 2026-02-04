@@ -1,0 +1,24 @@
+weights: ./work_dir/recognition/cobot/ST_GCN/epoch180_model.pt
+
+# feeder
+feeder: feeder.feeder.Feeder
+test_feeder_args:
+  data_path: ./data_ori/xsub/val_position.npy
+  label_path: ./data_ori/xsub/val_label.pkl
+
+# model
+model: net.st_gcn.Model
+model_args:
+  in_channels: 3
+  num_class: 20
+  dropout: 0.5
+  edge_importance_weighting: True
+  graph_args:
+    layout: 'cobot'
+    strategy: 'distance'
+
+# test 
+phase: test
+device: 0
+test_batch_size: 64
+

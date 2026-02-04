@@ -1,0 +1,33 @@
+work_dir: ./work_dir/recognition/cobot/ST_GCN_TWO_STREAM
+
+# feeder
+feeder: feeder.feeder.Feeder
+train_feeder_args:
+  data_path: ./st_gcn_50_NG/xsub/train_position.npy
+  label_path: ./st_gcn_50_NG/xsub/train_label.pkl
+  data_ratio: 1.0
+test_feeder_args:
+  data_path: ./st_gcn_50_NG/xsub/val_position.npy
+  label_path: ./st_gcn_50_NG/xsub/val_label.pkl
+
+# model
+model: net.st_gcn_twostream.Model
+model_args:
+  in_channels: 3
+  num_class: 20 
+  dropout: 0.5
+  edge_importance_weighting: True
+  graph_args:
+    layout: 'cobot'
+    strategy: 'distance'
+
+#optim
+weight_decay: 0.0001
+base_lr: 0.1
+step: [30,70]
+
+# training
+device: [2] 
+batch_size: 64 
+test_batch_size: 64
+num_epoch: 100
