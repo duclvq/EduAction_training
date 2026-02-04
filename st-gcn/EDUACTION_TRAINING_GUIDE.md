@@ -33,13 +33,20 @@ python main.py recognition -c config/st_gcn/eduaction/train.yaml
 ```
 Uses all 133 keypoints including face, body, hands, and feet.
 
-### 2. Body Only (23 keypoints)
+### 2. Upper Body (127 keypoints) - Recommended
+```bash
+python main.py recognition -c config/st_gcn/eduaction/train_upper.yaml
+```
+Body + face + hands, without feet. Same as MGSAN `upper_body` configuration.
+Best for classroom actions where feet are often not visible.
+
+### 3. Body Only (23 keypoints)
 ```bash
 python main.py recognition -c config/st_gcn/eduaction/train_body.yaml
 ```
-Faster training with only body and feet keypoints.
+Fastest training with only body and feet keypoints.
 
-### 3. Body + Hands (65 keypoints)
+### 4. Body + Hands (65 keypoints)
 ```bash
 python main.py recognition -c config/st_gcn/eduaction/train_hands.yaml
 ```
@@ -81,13 +88,13 @@ python main.py recognition -c config/st_gcn/eduaction/train.yaml \
 
 ### 4. Evaluate a Trained Model
 ```bash
-python main.py recognition -c config/st_gcn/eduaction/test.yaml \
-    --weights ./work_dir/recognition/eduaction/ST_GCN/best_model.pt \
-    --phase test
-```
-
-## Training Parameters
-
+python main.py recognitionUpper Body | Body Only | Body+Hands |
+|-----------|-----------|------------|-----------|------------|
+| Keypoints | 133 | 127 | 23 | 65 |
+| Batch Size | 16 | 16 | 32 | 24 |
+| Base LR | 0.01 | 0.01 | 0.01 | 0.01 |
+| Epochs | 100 | 100 | 100 | 100 |
+| LR Steps | [40,60,80]
 | Parameter | Full Body | Body Only | Body+Hands |
 |-----------|-----------|-----------|------------|
 | Keypoints | 133 | 23 | 65 |
@@ -101,9 +108,10 @@ python main.py recognition -c config/st_gcn/eduaction/test.yaml \
 ```
 st-gcn/
 ├── config/st_gcn/eduaction/
-│   ├── train.yaml        # Full body training
-│   ├── train_body.yaml   # Body only training
-│   ├── train_hands.yaml  # Body + hands training
+│   ├── train.yaml        # Full body training (133 kpts)
+│   ├── train_upper.yaml  # Upper body training (127 kpts) - Recommended
+│   ├── train_body.yaml   # Body only training (23 kpts)
+│   ├── train_hands.yaml  # Body + hands training (65 kpts)
 │   └── test.yaml         # Evaluation config
 ├── feeder/
 │   └── feeder_eduaction.py  # EduAction data loader
@@ -115,17 +123,29 @@ st-gcn/
 
 ## Graph Layouts
 
-Three graph layouts are available for EduAction:
+Four graph layouts are available for EduAction:
 
-1. **`eduaction`**: Full 133 keypoints with all connections
-2. **`eduaction_body`**: 23 keypoints (body + feet)
-3. **`eduaction_hands`**: 65 keypoints (body + both hands, remapped indices)
+| Layout | Keypoints | Description |
+|--------|-----------|-------------|
+| `eduaction` | 133 | Full body with all connections |
+| `eduaction_upper` | 127 | Body + face + hands (no feet) |
+| `eduaction_body` | 23 | Body + feet only |
+| `eduaction_hands` | 65 | Body + both hands (remapped indices) |
 
-## Comparison with Other Models
+## Comparison with Other 127/65/23 | Original GCN-based method |
+| MGSAN | PyTorch | 133/127 | Multi-scale attention |
+| DD-Net | TensorFlow | 133 | Lightweight, fast |
 
-| Model | Framework | Keypoints | Notes |
-|-------|-----------|-----------|-------|
-| ST-GCN | PyTorch | 133/23/65 | Original GCN-based method |
+All models use the **same data split** (70/30, seed=42) for fair comparison.
+
+### Keypoint Subset Mapping
+
+| Subset Name | ST-GCN Config | MGSAN Config | Keypoints |
+|-------------|---------------|--------------|-----------|
+| Full Body | `train.yaml` | `full_body` | 133 |
+| Upper Body | `train_upper.yaml` | `upper_body` | 127 |
+| Body Only | `train_body.yaml` | `body_only` | 23 |
+| Body + Hands | `train_hands.yaml` | `body_hands` | 65 |
 | MGSAN | PyTorch | 133 | Multi-scale attention |
 | DD-Net | TensorFlow | 133 | Lightweight, fast |
 

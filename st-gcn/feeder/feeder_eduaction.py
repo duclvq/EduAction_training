@@ -205,11 +205,22 @@ class FeederEduAction(Dataset):
         data_numpy = np.array(self.data[index]).astype(np.float32)
         label = self.label[index]
 
-        # Apply data augmentation
-        if self.random_choose:
-            data_numpy = tools.random_choose(data_numpy, self.window_size)
-        elif self.window_size > 0:
-            data_numpy = tools.auto_pading(data_numpy, self.window_size)
+        C, T, V, M = data_numpy.shape
+        
+        # IMPORTANT: Always ensure consistent frame size for batching
+        if self.window_size > 0:
+            if self.random_choose:
+                data_numpy = tools.random_choose(data_numpy, self.window_size)
+            else:
+                # Resize to exact window_size
+                if T == self.window_size:
+                    pass
+                elif T < self.window_size:
+                    # Pad with zeros
+                    data_numpy = tools.auto_pading(data_numpy, self.window_size)
+                else:
+                    # Crop to window_size (take middle part or beginning)
+                    data_numpy = data_numpy[:, :self.window_size, :, :]
             
         if self.random_move:
             data_numpy = tools.random_move(data_numpy)

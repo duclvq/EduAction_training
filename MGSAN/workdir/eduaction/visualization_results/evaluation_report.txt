@@ -4,34 +4,34 @@ MGSAN EduAction - Training Results Summary
 
 Config                           Best Epoch   Accuracy
 -------------------------------------------------------
-Full Body (133 kp)                        1     94.29%
+Full Body (133 kp)                        1     81.90%
 Upper Body (127 kp)                       1     83.81%
 Body+Hands (65 kp)                        1     80.95%
 
 ======================================================================
 Full Body (133 kp) (Best Epoch: 1)
 ======================================================================
-Overall Accuracy: 94.29%
+Overall Accuracy: 81.90%
 
 Class                  Accuracy  Precision     Recall         F1
 ------------------------------------------------------------
-drinking                 91.67%     91.67%     91.67%     91.67%
-lecture                 100.00%     90.00%    100.00%     94.74%
-play_phone               92.86%     92.86%     92.86%     92.86%
-sleeping                 90.91%    100.00%     90.91%     95.24%
-talking                 100.00%    100.00%    100.00%    100.00%
-watch_computer          100.00%    100.00%    100.00%    100.00%
-writing                  92.31%     92.31%     92.31%     92.31%
+drinking                 93.33%     82.35%     93.33%     87.50%
+lecture                  66.67%     71.43%     66.67%     68.97%
+play_phone               80.00%     92.31%     80.00%     85.71%
+sleeping                100.00%    100.00%    100.00%    100.00%
+talking                  73.33%     64.71%     73.33%     68.75%
+watch_computer           80.00%     75.00%     80.00%     77.42%
+writing                  80.00%     92.31%     80.00%     85.71%
 
 Confusion Matrix:
            drink    lect   phone   sleep    talk   watch   write
-    drink     11       1       0       0       0       0       0
-     lect      0       9       0       0       0       0       0
-    phone      0       0      13       0       0       0       1
-    sleep      1       0       0      10       0       0       0
-     talk      0       0       0       0       5       0       0
-    watch      0       0       0       0       0       6       0
-    write      0       0       1       0       0       0      12
+    drink     14       0       0       0       1       0       0
+     lect      1      10       0       0       4       0       0
+    phone      0       0      12       0       0       2       1
+    sleep      0       0       0      15       0       0       0
+     talk      0       4       0       0      11       0       0
+    watch      1       0       1       0       1      12       0
+    write      1       0       0       0       0       2      12
 
 ======================================================================
 Upper Body (127 kp) (Best Epoch: 1)
