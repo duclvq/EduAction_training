@@ -1,0 +1,54 @@
+# K-Fold Cross Validation Config for MGSAN on EduAction (Upper Body - 127 keypoints)
+# All random seeds are fixed for reproducibility
+
+# Work directory
+work_dir: ./work_dir/eduaction_kfold/mgsan_upper
+
+# K-Fold settings
+n_folds: 5
+seed: 42  # Master seed for reproducibility
+
+# Data settings
+data_dir: /mnt/d/data/EduAction_pose_data
+keypoint_subset: upper_body  # 127 keypoints (no feet)
+window_size: 64
+
+# Data augmentation (deterministic with seed)
+p_interval: [0.5, 1]
+random_rot: true
+
+# Model
+model_args:
+  num_class: 7
+  num_point: 127
+  num_person: 1
+  in_channels: 2
+  dropout: 0.0
+  graph: graph.eduaction.GraphEduActionUpperBody
+  graph_args:
+    labeling_mode: spatial
+
+# Training
+num_epoch: 120
+batch_size: 16
+test_batch_size: 16
+num_worker: 4
+
+# Optimizer
+optimizer: SGD
+base_lr: 0.1
+weight_decay: 0.0001
+nesterov: true
+step:
+  - 60
+  - 80
+  - 100
+
+# Logging
+eval_interval: 1
+save_interval: 10
+
+# Device
+use_gpu: true
+device:
+  - 0
