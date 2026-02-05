@@ -1,0 +1,62 @@
+# command line: main.py recognition -c config/st_gcn/eduaction/train_upper.yaml
+
+base_lr: 0.01
+batch_size: 16
+config: config/st_gcn/eduaction/train_upper.yaml
+debug: false
+device:
+- 0
+eval_interval: 5
+feeder: feeder.feeder_eduaction.FeederEduAction
+ignore_weights: []
+log_interval: 100
+model: net.st_gcn.Model
+model_args:
+    dropout: 0.5
+    edge_importance_weighting: true
+    graph_args:
+        layout: eduaction_upper
+        strategy: spatial
+    in_channels: 2
+    num_class: 7
+nesterov: true
+num_epoch: 120
+num_worker: 4
+optimizer: SGD
+pavi_log: false
+phase: train
+print_log: true
+save_interval: 10
+save_log: true
+save_result: false
+show_topk:
+- 1
+- 5
+start_epoch: 0
+step:
+- 40
+- 60
+- 80
+test_batch_size: 16
+test_feeder_args:
+    data_dir: /mnt/d/data/EduAction_pose_data
+    debug: false
+    keypoint_subset: upper_body
+    seed: 42
+    split: test
+    train_ratio: 0.7
+    window_size: 64
+train_feeder_args:
+    data_dir: /mnt/d/data/EduAction_pose_data
+    debug: false
+    keypoint_subset: upper_body
+    random_choose: true
+    random_move: true
+    seed: 42
+    split: train
+    train_ratio: 0.7
+    window_size: 64
+use_gpu: true
+weight_decay: 0.0001
+weights: null
+work_dir: ./work_dir/recognition/eduaction_upper/ST_GCN

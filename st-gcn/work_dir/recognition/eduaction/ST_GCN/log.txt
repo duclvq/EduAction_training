@@ -1,0 +1,1195 @@
+[02.05.26|00:27:05] Parameters:
+{'work_dir': './work_dir/recognition/eduaction/ST_GCN', 'config': 'config/st_gcn/eduaction/train.yaml', 'phase': 'train', 'save_result': False, 'start_epoch': 0, 'num_epoch': 100, 'use_gpu': True, 'device': [0], 'log_interval': 100, 'save_interval': 10, 'eval_interval': 5, 'save_log': True, 'print_log': True, 'pavi_log': False, 'feeder': 'feeder.feeder_eduaction.FeederEduAction', 'num_worker': 4, 'train_feeder_args': {'data_dir': '/mnt/d/data/EduAction_pose_data', 'split': 'train', 'random_choose': True, 'random_move': True, 'window_size': 64, 'debug': False, 'train_ratio': 0.7, 'seed': 42, 'keypoint_subset': 'full_body'}, 'test_feeder_args': {'data_dir': '/mnt/d/data/EduAction_pose_data', 'split': 'test', 'window_size': 64, 'debug': False, 'train_ratio': 0.7, 'seed': 42, 'keypoint_subset': 'full_body'}, 'batch_size': 16, 'test_batch_size': 16, 'debug': False, 'model': 'net.st_gcn.Model', 'model_args': {'in_channels': 2, 'num_class': 7, 'dropout': 0.5, 'edge_importance_weighting': True, 'graph_args': {'layout': 'eduaction', 'strategy': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'show_topk': [1, 5], 'base_lr': 0.01, 'step': [40, 60, 80], 'optimizer': 'SGD', 'nesterov': True, 'weight_decay': 0.0001}
+
+[02.05.26|00:27:05] ---------- Networks initialized -------------
+[02.05.26|00:27:05] [Network] Total number of parameters : 3.597 M
+[02.05.26|00:27:05] -----------------------------------------------
+[02.05.26|00:27:05] Training epoch: 0
+[02.05.26|00:27:14] 	Iter 0 Done. | loss: 1.9579 | lr: 0.010000
+[02.05.26|00:27:16] 	mean_loss: 1.951643911997477
+[02.05.26|00:27:16] Time consumption:
+[02.05.26|00:27:16] Done.
+[02.05.26|00:27:16] Training epoch: 1
+[02.05.26|00:27:18] 	mean_loss: 1.90601646900177
+[02.05.26|00:27:18] Time consumption:
+[02.05.26|00:27:18] Done.
+[02.05.26|00:27:18] Training epoch: 2
+[02.05.26|00:27:21] 	mean_loss: 1.8654943863550821
+[02.05.26|00:27:21] Time consumption:
+[02.05.26|00:27:21] Done.
+[02.05.26|00:27:21] Training epoch: 3
+[02.05.26|00:27:23] 	mean_loss: 1.8021644751230876
+[02.05.26|00:27:23] Time consumption:
+[02.05.26|00:27:23] Done.
+[02.05.26|00:27:24] Training epoch: 4
+[02.05.26|00:27:26] 	mean_loss: 1.73701069355011
+[02.05.26|00:27:26] Time consumption:
+[02.05.26|00:27:26] Done.
+[02.05.26|00:27:26] Eval epoch: 4
+[02.05.26|00:30:32] Parameters:
+{'work_dir': './work_dir/recognition/eduaction/ST_GCN', 'config': 'config/st_gcn/eduaction/train.yaml', 'phase': 'train', 'save_result': False, 'start_epoch': 0, 'num_epoch': 100, 'use_gpu': True, 'device': [0], 'log_interval': 100, 'save_interval': 10, 'eval_interval': 5, 'save_log': True, 'print_log': True, 'pavi_log': False, 'feeder': 'feeder.feeder_eduaction.FeederEduAction', 'num_worker': 4, 'train_feeder_args': {'data_dir': '/mnt/d/data/EduAction_pose_data', 'split': 'train', 'random_choose': True, 'random_move': True, 'window_size': 64, 'debug': False, 'train_ratio': 0.7, 'seed': 42, 'keypoint_subset': 'full_body'}, 'test_feeder_args': {'data_dir': '/mnt/d/data/EduAction_pose_data', 'split': 'test', 'window_size': 64, 'debug': False, 'train_ratio': 0.7, 'seed': 42, 'keypoint_subset': 'full_body'}, 'batch_size': 16, 'test_batch_size': 16, 'debug': False, 'model': 'net.st_gcn.Model', 'model_args': {'in_channels': 2, 'num_class': 7, 'dropout': 0.5, 'edge_importance_weighting': True, 'graph_args': {'layout': 'eduaction', 'strategy': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'show_topk': [1, 5], 'base_lr': 0.01, 'step': [40, 60, 80], 'optimizer': 'SGD', 'nesterov': True, 'weight_decay': 0.0001}
+
+[02.05.26|00:30:32] ---------- Networks initialized -------------
+[02.05.26|00:30:32] [Network] Total number of parameters : 3.597 M
+[02.05.26|00:30:32] -----------------------------------------------
+[02.05.26|00:30:32] Training epoch: 0
+[02.05.26|00:30:37] 	Iter 0 Done. | loss: 1.8992 | lr: 0.010000
+[02.05.26|00:30:39] 	mean_loss: 1.946314311027527
+[02.05.26|00:30:39] Time consumption:
+[02.05.26|00:30:39] Done.
+[02.05.26|00:30:39] Training epoch: 1
+[02.05.26|00:30:41] 	mean_loss: 1.9038569529851277
+[02.05.26|00:30:41] Time consumption:
+[02.05.26|00:30:41] Done.
+[02.05.26|00:30:41] Training epoch: 2
+[02.05.26|00:30:44] 	mean_loss: 1.8201531330744425
+[02.05.26|00:30:44] Time consumption:
+[02.05.26|00:30:44] Done.
+[02.05.26|00:30:44] Training epoch: 3
+[02.05.26|00:30:46] 	mean_loss: 1.7624521891276042
+[02.05.26|00:30:46] Time consumption:
+[02.05.26|00:30:46] Done.
+[02.05.26|00:30:46] Training epoch: 4
+[02.05.26|00:30:49] 	mean_loss: 1.753985341389974
+[02.05.26|00:30:49] Time consumption:
+[02.05.26|00:30:49] Done.
+[02.05.26|00:30:49] Eval epoch: 4
+[02.05.26|00:30:50] 	mean_loss: 1.745213610785348
+[02.05.26|00:30:50] 	Top1: 30.48%
+[02.05.26|00:30:50] 	Top5: 89.52%
+[02.05.26|00:30:50] Done.
+[02.05.26|00:30:50] Training epoch: 5
+[02.05.26|00:30:52] 	mean_loss: 1.7505086660385132
+[02.05.26|00:30:52] Time consumption:
+[02.05.26|00:30:52] Done.
+[02.05.26|00:30:52] Training epoch: 6
+[02.05.26|00:30:54] 	Iter 100 Done. | loss: 1.7769 | lr: 0.010000
+[02.05.26|00:30:55] 	mean_loss: 1.7244549989700317
+[02.05.26|00:30:55] Time consumption:
+[02.05.26|00:30:55] Done.
+[02.05.26|00:30:55] Training epoch: 7
+[02.05.26|00:30:57] 	mean_loss: 1.6831703662872315
+[02.05.26|00:30:57] Time consumption:
+[02.05.26|00:30:57] Done.
+[02.05.26|00:30:57] Training epoch: 8
+[02.05.26|00:31:00] 	mean_loss: 1.6745303948720296
+[02.05.26|00:31:00] Time consumption:
+[02.05.26|00:31:00] Done.
+[02.05.26|00:31:00] Training epoch: 9
+[02.05.26|00:31:03] 	mean_loss: 1.6703542709350585
+[02.05.26|00:31:03] Time consumption:
+[02.05.26|00:31:03] Done.
+[02.05.26|00:31:03] The model has been saved as ./work_dir/recognition/eduaction/ST_GCN/epoch10_model.pt.
+[02.05.26|00:31:03] Eval epoch: 9
+[02.05.26|00:31:04] 	mean_loss: 1.5924163545880998
+[02.05.26|00:31:04] 	Top1: 40.95%
+[02.05.26|00:31:04] 	Top5: 92.38%
+[02.05.26|00:31:04] Done.
+[02.05.26|00:31:04] Training epoch: 10
+[02.05.26|00:31:06] 	mean_loss: 1.6569265921910603
+[02.05.26|00:31:06] Time consumption:
+[02.05.26|00:31:06] Done.
+[02.05.26|00:31:06] Training epoch: 11
+[02.05.26|00:31:09] 	mean_loss: 1.653385837872823
+[02.05.26|00:31:09] Time consumption:
+[02.05.26|00:31:09] Done.
+[02.05.26|00:31:09] Training epoch: 12
+[02.05.26|00:31:12] 	mean_loss: 1.6197033961613974
+[02.05.26|00:31:12] Time consumption:
+[02.05.26|00:31:12] Done.
+[02.05.26|00:31:12] Training epoch: 13
+[02.05.26|00:31:13] 	Iter 200 Done. | loss: 1.8802 | lr: 0.010000
+[02.05.26|00:31:14] 	mean_loss: 1.6315075159072876
+[02.05.26|00:31:14] Time consumption:
+[02.05.26|00:31:14] Done.
+[02.05.26|00:31:14] Training epoch: 14
+[02.05.26|00:31:17] 	mean_loss: 1.5592384497324625
+[02.05.26|00:31:17] Time consumption:
+[02.05.26|00:31:17] Done.
+[02.05.26|00:31:17] Eval epoch: 14
+[02.05.26|00:31:18] 	mean_loss: 1.375652892248971
+[02.05.26|00:31:18] 	Top1: 49.52%
+[02.05.26|00:31:18] 	Top5: 94.29%
+[02.05.26|00:31:18] Done.
+[02.05.26|00:31:18] Training epoch: 15
+[02.05.26|00:31:20] 	mean_loss: 1.5312846104303997
+[02.05.26|00:31:20] Time consumption:
+[02.05.26|00:31:20] Done.
+[02.05.26|00:31:20] Training epoch: 16
+[02.05.26|00:31:23] 	mean_loss: 1.3459590911865233
+[02.05.26|00:31:23] Time consumption:
+[02.05.26|00:31:23] Done.
+[02.05.26|00:31:23] Training epoch: 17
+[02.05.26|00:31:26] 	mean_loss: 1.2661157687505087
+[02.05.26|00:31:26] Time consumption:
+[02.05.26|00:31:26] Done.
+[02.05.26|00:31:26] Training epoch: 18
+[02.05.26|00:31:28] 	mean_loss: 1.234819189707438
+[02.05.26|00:31:28] Time consumption:
+[02.05.26|00:31:28] Done.
+[02.05.26|00:31:28] Training epoch: 19
+[02.05.26|00:31:31] 	mean_loss: 1.2033312916755676
+[02.05.26|00:31:31] Time consumption:
+[02.05.26|00:31:31] Done.
+[02.05.26|00:31:31] The model has been saved as ./work_dir/recognition/eduaction/ST_GCN/epoch20_model.pt.
+[02.05.26|00:31:31] Eval epoch: 19
+[02.05.26|00:31:32] 	mean_loss: 1.2787226949419295
+[02.05.26|00:31:32] 	Top1: 59.05%
+[02.05.26|00:31:32] 	Top5: 97.14%
+[02.05.26|00:31:32] Done.
+[02.05.26|00:31:32] Training epoch: 20
+[02.05.26|00:31:32] 	Iter 300 Done. | loss: 0.9711 | lr: 0.010000
+[02.05.26|00:31:35] 	mean_loss: 1.219222601254781
+[02.05.26|00:31:35] Time consumption:
+[02.05.26|00:31:35] Done.
+[02.05.26|00:31:35] Training epoch: 21
+[02.05.26|00:31:37] 	mean_loss: 1.207862913608551
+[02.05.26|00:31:37] Time consumption:
+[02.05.26|00:31:37] Done.
+[02.05.26|00:31:37] Training epoch: 22
+[02.05.26|00:31:40] 	mean_loss: 1.1465925812721252
+[02.05.26|00:31:40] Time consumption:
+[02.05.26|00:31:40] Done.
+[02.05.26|00:31:40] Training epoch: 23
+[02.05.26|00:31:42] 	mean_loss: 1.059057064851125
+[02.05.26|00:31:42] Time consumption:
+[02.05.26|00:31:43] Done.
+[02.05.26|00:31:43] Training epoch: 24
+[02.05.26|00:31:45] 	mean_loss: 1.1211204727490742
+[02.05.26|00:31:45] Time consumption:
+[02.05.26|00:31:45] Done.
+[02.05.26|00:31:45] Eval epoch: 24
+[02.05.26|00:31:46] 	mean_loss: 1.0200259344918388
+[02.05.26|00:31:46] 	Top1: 60.95%
+[02.05.26|00:31:46] 	Top5: 97.14%
+[02.05.26|00:31:46] Done.
+[02.05.26|00:31:46] Training epoch: 25
+[02.05.26|00:31:48] 	mean_loss: 1.0227373600006104
+[02.05.26|00:31:48] Time consumption:
+[02.05.26|00:31:49] Done.
+[02.05.26|00:31:49] Training epoch: 26
+[02.05.26|00:31:50] 	Iter 400 Done. | loss: 0.9592 | lr: 0.010000
+[02.05.26|00:31:51] 	mean_loss: 1.1587467273076375
+[02.05.26|00:31:51] Time consumption:
+[02.05.26|00:31:51] Done.
+[02.05.26|00:31:51] Training epoch: 27
+[02.05.26|00:31:54] 	mean_loss: 0.9868534326553344
+[02.05.26|00:31:54] Time consumption:
+[02.05.26|00:31:54] Done.
+[02.05.26|00:31:54] Training epoch: 28
+[02.05.26|00:31:56] 	mean_loss: 1.0934740384419759
+[02.05.26|00:31:56] Time consumption:
+[02.05.26|00:31:56] Done.
+[02.05.26|00:31:56] Training epoch: 29
+[02.05.26|00:31:59] 	mean_loss: 0.9913178523381551
+[02.05.26|00:31:59] Time consumption:
+[02.05.26|00:31:59] Done.
+[02.05.26|00:31:59] The model has been saved as ./work_dir/recognition/eduaction/ST_GCN/epoch30_model.pt.
+[02.05.26|00:31:59] Eval epoch: 29
+[02.05.26|00:32:00] 	mean_loss: 1.1626794678824288
+[02.05.26|00:32:00] 	Top1: 66.67%
+[02.05.26|00:32:00] 	Top5: 98.10%
+[02.05.26|00:32:00] Done.
+[02.05.26|00:32:00] Training epoch: 30
+[02.05.26|00:32:03] 	mean_loss: 0.9874693950017294
+[02.05.26|00:32:03] Time consumption:
+[02.05.26|00:32:03] Done.
+[02.05.26|00:32:03] Training epoch: 31
+[02.05.26|00:32:05] 	mean_loss: 0.9614827791849773
+[02.05.26|00:32:05] Time consumption:
+[02.05.26|00:32:05] Done.
+[02.05.26|00:32:05] Training epoch: 32
+[02.05.26|00:32:08] 	mean_loss: 1.1462270220120747
+[02.05.26|00:32:08] Time consumption:
+[02.05.26|00:32:08] Done.
+[02.05.26|00:32:08] Training epoch: 33
+[02.05.26|00:32:09] 	Iter 500 Done. | loss: 0.6858 | lr: 0.010000
+[02.05.26|00:32:10] 	mean_loss: 0.9188536802927653
+[02.05.26|00:32:10] Time consumption:
+[02.05.26|00:32:11] Done.
+[02.05.26|00:32:11] Training epoch: 34
+[02.05.26|00:32:13] 	mean_loss: 0.9279253800710042
+[02.05.26|00:32:13] Time consumption:
+[02.05.26|00:32:13] Done.
+[02.05.26|00:32:13] Eval epoch: 34
+[02.05.26|00:32:14] 	mean_loss: 1.0087372958660126
+[02.05.26|00:32:14] 	Top1: 66.67%
+[02.05.26|00:32:14] 	Top5: 97.14%
+[02.05.26|00:32:14] Done.
+[02.05.26|00:32:14] Training epoch: 35
+[02.05.26|00:32:16] 	mean_loss: 0.9749335527420044
+[02.05.26|00:32:16] Time consumption:
+[02.05.26|00:32:16] Done.
+[02.05.26|00:32:16] Training epoch: 36
+[02.05.26|00:32:19] 	mean_loss: 0.9578074892361959
+[02.05.26|00:32:19] Time consumption:
+[02.05.26|00:32:19] Done.
+[02.05.26|00:32:19] Training epoch: 37
+[02.05.26|00:32:22] 	mean_loss: 0.9055249134699503
+[02.05.26|00:32:22] Time consumption:
+[02.05.26|00:32:22] Done.
+[02.05.26|00:32:22] Training epoch: 38
+[02.05.26|00:32:24] 	mean_loss: 1.013810141881307
+[02.05.26|00:32:24] Time consumption:
+[02.05.26|00:32:24] Done.
+[02.05.26|00:32:24] Training epoch: 39
+[02.05.26|00:32:27] 	mean_loss: 1.0321376383304597
+[02.05.26|00:32:27] Time consumption:
+[02.05.26|00:32:27] Done.
+[02.05.26|00:32:27] The model has been saved as ./work_dir/recognition/eduaction/ST_GCN/epoch40_model.pt.
+[02.05.26|00:32:27] Eval epoch: 39
+[02.05.26|00:32:28] 	mean_loss: 1.281541211264474
+[02.05.26|00:32:28] 	Top1: 61.90%
+[02.05.26|00:32:28] 	Top5: 95.24%
+[02.05.26|00:32:28] Done.
+[02.05.26|00:32:28] Training epoch: 40
+[02.05.26|00:32:28] 	Iter 600 Done. | loss: 0.5563 | lr: 0.001000
+[02.05.26|00:32:30] 	mean_loss: 0.8189448793729146
+[02.05.26|00:32:30] Time consumption:
+[02.05.26|00:32:30] Done.
+[02.05.26|00:32:30] Training epoch: 41
+[02.05.26|00:32:33] 	mean_loss: 0.7938793341318766
+[02.05.26|00:32:33] Time consumption:
+[02.05.26|00:32:33] Done.
+[02.05.26|00:32:33] Training epoch: 42
+[02.05.26|00:32:35] 	mean_loss: 0.7021596848964691
+[02.05.26|00:32:35] Time consumption:
+[02.05.26|00:32:36] Done.
+[02.05.26|00:32:36] Training epoch: 43
+[02.05.26|00:32:38] 	mean_loss: 0.7799492239952087
+[02.05.26|00:32:38] Time consumption:
+[02.05.26|00:32:38] Done.
+[02.05.26|00:32:38] Training epoch: 44
+[02.05.26|00:32:41] 	mean_loss: 0.8563439170519511
+[02.05.26|00:32:41] Time consumption:
+[02.05.26|00:32:41] Done.
+[02.05.26|00:32:41] Eval epoch: 44
+[02.05.26|00:32:41] 	mean_loss: 0.8232310584613255
+[02.05.26|00:32:41] 	Top1: 72.38%
+[02.05.26|00:32:41] 	Top5: 98.10%
+[02.05.26|00:32:42] Done.
+[02.05.26|00:32:42] Training epoch: 45
+[02.05.26|00:32:44] 	mean_loss: 0.6470878720283508
+[02.05.26|00:32:44] Time consumption:
+[02.05.26|00:32:44] Done.
+[02.05.26|00:32:44] Training epoch: 46
+[02.05.26|00:32:46] 	Iter 700 Done. | loss: 0.7682 | lr: 0.001000
+[02.05.26|00:32:47] 	mean_loss: 0.6839067041873932
+[02.05.26|00:32:47] Time consumption:
+[02.05.26|00:32:47] Done.
+[02.05.26|00:32:47] Training epoch: 47
+[02.05.26|00:32:49] 	mean_loss: 0.7674215376377106
+[02.05.26|00:32:49] Time consumption:
+[02.05.26|00:32:49] Done.
+[02.05.26|00:32:49] Training epoch: 48
+[02.05.26|00:32:52] 	mean_loss: 0.6997091193993886
+[02.05.26|00:32:52] Time consumption:
+[02.05.26|00:32:52] Done.
+[02.05.26|00:32:52] Training epoch: 49
+[02.05.26|00:32:55] 	mean_loss: 0.8038430333137512
+[02.05.26|00:32:55] Time consumption:
+[02.05.26|00:32:55] Done.
+[02.05.26|00:32:55] The model has been saved as ./work_dir/recognition/eduaction/ST_GCN/epoch50_model.pt.
+[02.05.26|00:32:55] Eval epoch: 49
+[02.05.26|00:32:56] 	mean_loss: 0.8567459412983486
+[02.05.26|00:32:56] 	Top1: 75.24%
+[02.05.26|00:32:56] 	Top5: 98.10%
+[02.05.26|00:32:56] Done.
+[02.05.26|00:32:56] Training epoch: 50
+[02.05.26|00:32:58] 	mean_loss: 0.7589323262373606
+[02.05.26|00:32:59] Time consumption:
+[02.05.26|00:32:59] Done.
+[02.05.26|00:32:59] Training epoch: 51
+[02.05.26|00:33:01] 	mean_loss: 0.739816015958786
+[02.05.26|00:33:01] Time consumption:
+[02.05.26|00:33:01] Done.
+[02.05.26|00:33:01] Training epoch: 52
+[02.05.26|00:33:04] 	mean_loss: 0.7570066908995311
+[02.05.26|00:33:04] Time consumption:
+[02.05.26|00:33:04] Done.
+[02.05.26|00:33:04] Training epoch: 53
+[02.05.26|00:33:05] 	Iter 800 Done. | loss: 0.4767 | lr: 0.001000
+[02.05.26|00:33:07] 	mean_loss: 0.6854515035947164
+[02.05.26|00:33:07] Time consumption:
+[02.05.26|00:33:07] Done.
+[02.05.26|00:33:07] Training epoch: 54
+[02.05.26|00:33:09] 	mean_loss: 0.6330710192521413
+[02.05.26|00:33:09] Time consumption:
+[02.05.26|00:33:09] Done.
+[02.05.26|00:33:09] Eval epoch: 54
+[02.05.26|00:33:10] 	mean_loss: 0.8875297009944916
+[02.05.26|00:33:10] 	Top1: 73.33%
+[02.05.26|00:33:10] 	Top5: 97.14%
+[02.05.26|00:33:10] Done.
+[02.05.26|00:33:10] Training epoch: 55
+[02.05.26|00:33:13] 	mean_loss: 0.6889633456865947
+[02.05.26|00:33:13] Time consumption:
+[02.05.26|00:33:13] Done.
+[02.05.26|00:33:13] Training epoch: 56
+[02.05.26|00:33:15] 	mean_loss: 0.6330432216326396
+[02.05.26|00:33:15] Time consumption:
+[02.05.26|00:33:15] Done.
+[02.05.26|00:33:15] Training epoch: 57
+[02.05.26|00:33:18] 	mean_loss: 0.6333932022253672
+[02.05.26|00:33:18] Time consumption:
+[02.05.26|00:33:18] Done.
+[02.05.26|00:33:18] Training epoch: 58
+[02.05.26|00:33:21] 	mean_loss: 0.7579386333624522
+[02.05.26|00:33:21] Time consumption:
+[02.05.26|00:33:21] Done.
+[02.05.26|00:33:21] Training epoch: 59
+[02.05.26|00:33:23] 	mean_loss: 0.679090428352356
+[02.05.26|00:33:23] Time consumption:
+[02.05.26|00:33:23] Done.
+[02.05.26|00:33:24] The model has been saved as ./work_dir/recognition/eduaction/ST_GCN/epoch60_model.pt.
+[02.05.26|00:33:24] Eval epoch: 59
+[02.05.26|00:33:25] 	mean_loss: 0.9233753596033368
+[02.05.26|00:33:25] 	Top1: 73.33%
+[02.05.26|00:33:25] 	Top5: 97.14%
+[02.05.26|00:33:25] Done.
+[02.05.26|00:33:25] Training epoch: 60
+[02.05.26|00:33:25] 	Iter 900 Done. | loss: 0.5951 | lr: 0.000100
+[02.05.26|00:33:27] 	mean_loss: 0.6642442524433136
+[02.05.26|00:33:27] Time consumption:
+[02.05.26|00:33:27] Done.
+[02.05.26|00:33:27] Training epoch: 61
+[02.05.26|00:33:30] 	mean_loss: 0.6393258571624756
+[02.05.26|00:33:30] Time consumption:
+[02.05.26|00:33:30] Done.
+[02.05.26|00:33:30] Training epoch: 62
+[02.05.26|00:33:32] 	mean_loss: 0.7043790638446807
+[02.05.26|00:33:32] Time consumption:
+[02.05.26|00:33:32] Done.
+[02.05.26|00:33:32] Training epoch: 63
+[02.05.26|00:33:35] 	mean_loss: 0.602533229192098
+[02.05.26|00:33:35] Time consumption:
+[02.05.26|00:33:35] Done.
+[02.05.26|00:33:35] Training epoch: 64
+[02.05.26|00:33:38] 	mean_loss: 0.7997517228126526
+[02.05.26|00:33:38] Time consumption:
+[02.05.26|00:33:38] Done.
+[02.05.26|00:33:38] Eval epoch: 64
+[02.05.26|00:33:38] 	mean_loss: 0.9479098660605294
+[02.05.26|00:33:38] 	Top1: 75.24%
+[02.05.26|00:33:38] 	Top5: 97.14%
+[02.05.26|00:33:38] Done.
+[02.05.26|00:33:38] Training epoch: 65
+[02.05.26|00:33:41] 	mean_loss: 0.7050096849600475
+[02.05.26|00:33:41] Time consumption:
+[02.05.26|00:33:41] Done.
+[02.05.26|00:33:41] Training epoch: 66
+[02.05.26|00:33:43] 	Iter 1000 Done. | loss: 0.7998 | lr: 0.000100
+[02.05.26|00:33:44] 	mean_loss: 0.7294324040412903
+[02.05.26|00:33:44] Time consumption:
+[02.05.26|00:33:44] Done.
+[02.05.26|00:33:44] Training epoch: 67
+[02.05.26|00:33:46] 	mean_loss: 0.6309674739837646
+[02.05.26|00:33:46] Time consumption:
+[02.05.26|00:33:46] Done.
+[02.05.26|00:33:47] Training epoch: 68
+[02.05.26|00:33:49] 	mean_loss: 0.5786435405413309
+[02.05.26|00:33:49] Time consumption:
+[02.05.26|00:33:49] Done.
+[02.05.26|00:33:49] Training epoch: 69
+[02.05.26|00:33:52] 	mean_loss: 0.6043806652228038
+[02.05.26|00:33:52] Time consumption:
+[02.05.26|00:33:52] Done.
+[02.05.26|00:33:52] The model has been saved as ./work_dir/recognition/eduaction/ST_GCN/epoch70_model.pt.
+[02.05.26|00:33:52] Eval epoch: 69
+[02.05.26|00:33:53] 	mean_loss: 0.8946336933544704
+[02.05.26|00:33:53] 	Top1: 76.19%
+[02.05.26|00:33:53] 	Top5: 98.10%
+[02.05.26|00:33:53] Done.
+[02.05.26|00:33:53] Training epoch: 70
+[02.05.26|00:33:56] 	mean_loss: 0.6533889452616374
+[02.05.26|00:33:56] Time consumption:
+[02.05.26|00:33:56] Done.
+[02.05.26|00:33:56] Training epoch: 71
+[02.05.26|00:33:58] 	mean_loss: 0.6228160719076793
+[02.05.26|00:33:58] Time consumption:
+[02.05.26|00:33:58] Done.
+[02.05.26|00:33:58] Training epoch: 72
+[02.05.26|00:34:01] 	mean_loss: 0.6660640180110932
+[02.05.26|00:34:01] Time consumption:
+[02.05.26|00:34:01] Done.
+[02.05.26|00:34:01] Training epoch: 73
+[02.05.26|00:34:02] 	Iter 1100 Done. | loss: 0.7104 | lr: 0.000100
+[02.05.26|00:34:03] 	mean_loss: 0.7387945334116618
+[02.05.26|00:34:03] Time consumption:
+[02.05.26|00:34:04] Done.
+[02.05.26|00:34:04] Training epoch: 74
+[02.05.26|00:34:06] 	mean_loss: 0.6206977585951488
+[02.05.26|00:34:06] Time consumption:
+[02.05.26|00:34:06] Done.
+[02.05.26|00:34:06] Eval epoch: 74
+[02.05.26|00:34:07] 	mean_loss: 0.8939083048275539
+[02.05.26|00:34:07] 	Top1: 75.24%
+[02.05.26|00:34:07] 	Top5: 98.10%
+[02.05.26|00:34:07] Done.
+[02.05.26|00:34:07] Training epoch: 75
+[02.05.26|00:34:09] 	mean_loss: 0.7505553325017293
+[02.05.26|00:34:09] Time consumption:
+[02.05.26|00:34:09] Done.
+[02.05.26|00:34:10] Training epoch: 76
+[02.05.26|00:34:12] 	mean_loss: 0.6483646849791209
+[02.05.26|00:34:12] Time consumption:
+[02.05.26|00:34:12] Done.
+[02.05.26|00:34:12] Training epoch: 77
+[02.05.26|00:34:15] 	mean_loss: 0.6037061909834543
+[02.05.26|00:34:15] Time consumption:
+[02.05.26|00:34:15] Done.
+[02.05.26|00:34:15] Training epoch: 78
+[02.05.26|00:34:17] 	mean_loss: 0.6678544898827871
+[02.05.26|00:34:17] Time consumption:
+[02.05.26|00:34:17] Done.
+[02.05.26|00:34:17] Training epoch: 79
+[02.05.26|00:34:20] 	mean_loss: 0.6910426259040833
+[02.05.26|00:34:20] Time consumption:
+[02.05.26|00:34:20] Done.
+[02.05.26|00:34:20] The model has been saved as ./work_dir/recognition/eduaction/ST_GCN/epoch80_model.pt.
+[02.05.26|00:34:20] Eval epoch: 79
+[02.05.26|00:34:21] 	mean_loss: 0.9095708855560848
+[02.05.26|00:34:21] 	Top1: 74.29%
+[02.05.26|00:34:21] 	Top5: 97.14%
+[02.05.26|00:34:21] Done.
+[02.05.26|00:34:21] Training epoch: 80
+[02.05.26|00:34:21] 	Iter 1200 Done. | loss: 0.4610 | lr: 0.000010
+[02.05.26|00:34:24] 	mean_loss: 0.630327832698822
+[02.05.26|00:34:24] Time consumption:
+[02.05.26|00:34:24] Done.
+[02.05.26|00:34:24] Training epoch: 81
+[02.05.26|00:34:26] 	mean_loss: 0.5742656409740448
+[02.05.26|00:34:26] Time consumption:
+[02.05.26|00:34:26] Done.
+[02.05.26|00:34:26] Training epoch: 82
+[02.05.26|00:34:29] 	mean_loss: 0.6278884708881378
+[02.05.26|00:34:29] Time consumption:
+[02.05.26|00:34:29] Done.
+[02.05.26|00:34:29] Training epoch: 83
+[02.05.26|00:34:31] 	mean_loss: 0.6672262748082479
+[02.05.26|00:34:31] Time consumption:
+[02.05.26|00:34:31] Done.
+[02.05.26|00:34:31] Training epoch: 84
+[02.05.26|00:34:34] 	mean_loss: 0.645742787917455
+[02.05.26|00:34:34] Time consumption:
+[02.05.26|00:34:34] Done.
+[02.05.26|00:34:34] Eval epoch: 84
+[02.05.26|00:34:35] 	mean_loss: 0.8973985356943948
+[02.05.26|00:34:35] 	Top1: 75.24%
+[02.05.26|00:34:35] 	Top5: 97.14%
+[02.05.26|00:34:35] Done.
+[02.05.26|00:34:35] Training epoch: 85
+[02.05.26|00:34:37] 	mean_loss: 0.7212840000788371
+[02.05.26|00:34:37] Time consumption:
+[02.05.26|00:34:37] Done.
+[02.05.26|00:34:37] Training epoch: 86
+[02.05.26|00:34:39] 	Iter 1300 Done. | loss: 0.7472 | lr: 0.000010
+[02.05.26|00:34:40] 	mean_loss: 0.6318324466546377
+[02.05.26|00:34:40] Time consumption:
+[02.05.26|00:34:40] Done.
+[02.05.26|00:34:40] Training epoch: 87
+[02.05.26|00:34:42] 	mean_loss: 0.7595588664213816
+[02.05.26|00:34:42] Time consumption:
+[02.05.26|00:34:42] Done.
+[02.05.26|00:34:42] Training epoch: 88
+[02.05.26|00:34:45] 	mean_loss: 0.7305998861789703
+[02.05.26|00:34:45] Time consumption:
+[02.05.26|00:34:45] Done.
+[02.05.26|00:34:45] Training epoch: 89
+[02.05.26|00:34:48] 	mean_loss: 0.697541191180547
+[02.05.26|00:34:48] Time consumption:
+[02.05.26|00:34:48] Done.
+[02.05.26|00:34:48] The model has been saved as ./work_dir/recognition/eduaction/ST_GCN/epoch90_model.pt.
+[02.05.26|00:34:48] Eval epoch: 89
+[02.05.26|00:34:49] 	mean_loss: 0.901290271963392
+[02.05.26|00:34:49] 	Top1: 76.19%
+[02.05.26|00:34:49] 	Top5: 97.14%
+[02.05.26|00:34:49] Done.
+[02.05.26|00:34:49] Training epoch: 90
+[02.05.26|00:34:52] 	mean_loss: 0.656327611207962
+[02.05.26|00:34:52] Time consumption:
+[02.05.26|00:34:52] Done.
+[02.05.26|00:34:52] Training epoch: 91
+[02.05.26|00:34:54] 	mean_loss: 0.6602564096450806
+[02.05.26|00:34:54] Time consumption:
+[02.05.26|00:34:54] Done.
+[02.05.26|00:34:54] Training epoch: 92
+[02.05.26|00:34:57] 	mean_loss: 0.6110637247562408
+[02.05.26|00:34:57] Time consumption:
+[02.05.26|00:34:57] Done.
+[02.05.26|00:34:57] Training epoch: 93
+[02.05.26|00:34:58] 	Iter 1400 Done. | loss: 0.3919 | lr: 0.000010
+[02.05.26|00:35:00] 	mean_loss: 0.6207042495409648
+[02.05.26|00:35:00] Time consumption:
+[02.05.26|00:35:00] Done.
+[02.05.26|00:35:00] Training epoch: 94
+[02.05.26|00:35:02] 	mean_loss: 0.6877266565958658
+[02.05.26|00:35:02] Time consumption:
+[02.05.26|00:35:02] Done.
+[02.05.26|00:35:02] Eval epoch: 94
+[02.05.26|00:35:03] 	mean_loss: 0.8875809822763715
+[02.05.26|00:35:03] 	Top1: 78.10%
+[02.05.26|00:35:03] 	Top5: 97.14%
+[02.05.26|00:35:03] Done.
+[02.05.26|00:35:03] Training epoch: 95
+[02.05.26|00:35:06] 	mean_loss: 0.6354542096455892
+[02.05.26|00:35:06] Time consumption:
+[02.05.26|00:35:06] Done.
+[02.05.26|00:35:06] Training epoch: 96
+[02.05.26|00:35:08] 	mean_loss: 0.6558636069297791
+[02.05.26|00:35:08] Time consumption:
+[02.05.26|00:35:08] Done.
+[02.05.26|00:35:08] Training epoch: 97
+[02.05.26|00:35:11] 	mean_loss: 0.6682488282521566
+[02.05.26|00:35:11] Time consumption:
+[02.05.26|00:35:11] Done.
+[02.05.26|00:35:11] Training epoch: 98
+[02.05.26|00:35:14] 	mean_loss: 0.567980843782425
+[02.05.26|00:35:14] Time consumption:
+[02.05.26|00:35:14] Done.
+[02.05.26|00:35:14] Training epoch: 99
+[02.05.26|00:35:16] 	mean_loss: 0.6001665234565735
+[02.05.26|00:35:16] Time consumption:
+[02.05.26|00:35:16] Done.
+[02.05.26|00:35:17] The model has been saved as ./work_dir/recognition/eduaction/ST_GCN/epoch100_model.pt.
+[02.05.26|00:35:17] Eval epoch: 99
+[02.05.26|00:35:17] 	mean_loss: 0.9013633344854627
+[02.05.26|00:35:17] 	Top1: 75.24%
+[02.05.26|00:35:17] 	Top5: 98.10%
+[02.05.26|00:35:18] Done.
+[02.05.26|00:42:52] Parameters:
+{'work_dir': './work_dir/recognition/eduaction/ST_GCN', 'config': 'config/st_gcn/eduaction/train.yaml', 'phase': 'train', 'save_result': False, 'start_epoch': 0, 'num_epoch': 120, 'use_gpu': True, 'device': [0], 'log_interval': 100, 'save_interval': 10, 'eval_interval': 5, 'save_log': True, 'print_log': True, 'pavi_log': False, 'feeder': 'feeder.feeder_eduaction.FeederEduAction', 'num_worker': 4, 'train_feeder_args': {'data_dir': '/mnt/d/data/EduAction_pose_data', 'split': 'train', 'random_choose': True, 'random_move': True, 'window_size': 64, 'debug': False, 'train_ratio': 0.7, 'seed': 42, 'keypoint_subset': 'full_body'}, 'test_feeder_args': {'data_dir': '/mnt/d/data/EduAction_pose_data', 'split': 'test', 'window_size': 64, 'debug': False, 'train_ratio': 0.7, 'seed': 42, 'keypoint_subset': 'full_body'}, 'batch_size': 16, 'test_batch_size': 16, 'debug': False, 'model': 'net.st_gcn.Model', 'model_args': {'in_channels': 2, 'num_class': 7, 'dropout': 0.5, 'edge_importance_weighting': True, 'graph_args': {'layout': 'eduaction', 'strategy': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'show_topk': [1, 5], 'base_lr': 0.01, 'step': [40, 60, 80], 'optimizer': 'SGD', 'nesterov': True, 'weight_decay': 0.0001}
+
+[02.05.26|00:42:52] ---------- Networks initialized -------------
+[02.05.26|00:42:52] [Network] Total number of parameters : 3.597 M
+[02.05.26|00:42:52] -----------------------------------------------
+[02.05.26|00:42:52] Training epoch: 0
+[02.05.26|00:43:02] 	Iter 0 Done. | loss: 1.9447 | lr: 0.010000
+[02.05.26|00:43:04] 	mean_loss: 1.9679263671239218
+[02.05.26|00:43:04] Time consumption:
+[02.05.26|00:43:04] Done.
+[02.05.26|00:43:04] Training epoch: 1
+[02.05.26|00:43:06] 	mean_loss: 1.8840885957082112
+[02.05.26|00:43:06] Time consumption:
+[02.05.26|00:43:06] Done.
+[02.05.26|00:43:06] Training epoch: 2
+[02.05.26|00:43:09] 	mean_loss: 1.8314468065897624
+[02.05.26|00:43:09] Time consumption:
+[02.05.26|00:43:09] Done.
+[02.05.26|00:43:09] Training epoch: 3
+[02.05.26|00:43:11] 	mean_loss: 1.7960392554601035
+[02.05.26|00:43:11] Time consumption:
+[02.05.26|00:43:12] Done.
+[02.05.26|00:43:12] Training epoch: 4
+[02.05.26|00:43:14] 	mean_loss: 1.7935697317123414
+[02.05.26|00:43:14] Time consumption:
+[02.05.26|00:43:14] Done.
+[02.05.26|00:43:14] Eval epoch: 4
+[02.05.26|00:43:15] 	mean_loss: 1.7775462695530482
+[02.05.26|00:43:15] 	Top1: 32.38%
+[02.05.26|00:43:15] 	Top5: 89.52%
+[02.05.26|00:43:15] Done.
+[02.05.26|00:43:15] Training epoch: 5
+[02.05.26|00:43:17] 	mean_loss: 1.7838508367538453
+[02.05.26|00:43:17] Time consumption:
+[02.05.26|00:43:17] Done.
+[02.05.26|00:43:17] Training epoch: 6
+[02.05.26|00:43:19] 	Iter 100 Done. | loss: 1.7851 | lr: 0.010000
+[02.05.26|00:43:20] 	mean_loss: 1.771343477567037
+[02.05.26|00:43:20] Time consumption:
+[02.05.26|00:43:20] Done.
+[02.05.26|00:43:20] Training epoch: 7
+[02.05.26|00:43:22] 	mean_loss: 1.7474679231643677
+[02.05.26|00:43:22] Time consumption:
+[02.05.26|00:43:22] Done.
+[02.05.26|00:43:23] Training epoch: 8
+[02.05.26|00:43:25] 	mean_loss: 1.703617270787557
+[02.05.26|00:43:25] Time consumption:
+[02.05.26|00:43:25] Done.
+[02.05.26|00:43:25] Training epoch: 9
+[02.05.26|00:43:28] 	mean_loss: 1.690330735842387
+[02.05.26|00:43:28] Time consumption:
+[02.05.26|00:43:28] Done.
+[02.05.26|00:43:28] The model has been saved as ./work_dir/recognition/eduaction/ST_GCN/epoch10_model.pt.
+[02.05.26|00:43:28] Eval epoch: 9
+[02.05.26|00:43:29] 	mean_loss: 1.6304185390472412
+[02.05.26|00:43:29] 	Top1: 40.00%
+[02.05.26|00:43:29] 	Top5: 89.52%
+[02.05.26|00:43:29] Done.
+[02.05.26|00:43:29] Training epoch: 10
+[02.05.26|00:43:31] 	mean_loss: 1.6709080855051677
+[02.05.26|00:43:31] Time consumption:
+[02.05.26|00:43:31] Done.
+[02.05.26|00:43:31] Training epoch: 11
+[02.05.26|00:43:34] 	mean_loss: 1.6044539054234823
+[02.05.26|00:43:34] Time consumption:
+[02.05.26|00:43:34] Done.
+[02.05.26|00:43:34] Training epoch: 12
+[02.05.26|00:43:36] 	mean_loss: 1.5736530065536498
+[02.05.26|00:43:36] Time consumption:
+[02.05.26|00:43:36] Done.
+[02.05.26|00:43:36] Training epoch: 13
+[02.05.26|00:43:37] 	Iter 200 Done. | loss: 1.5984 | lr: 0.010000
+[02.05.26|00:43:39] 	mean_loss: 1.5959367434183755
+[02.05.26|00:43:39] Time consumption:
+[02.05.26|00:43:39] Done.
+[02.05.26|00:43:39] Training epoch: 14
+[02.05.26|00:43:41] 	mean_loss: 1.526738182703654
+[02.05.26|00:43:41] Time consumption:
+[02.05.26|00:43:41] Done.
+[02.05.26|00:43:41] Eval epoch: 14
+[02.05.26|00:43:42] 	mean_loss: 1.3677461317607336
+[02.05.26|00:43:42] 	Top1: 44.76%
+[02.05.26|00:43:42] 	Top5: 98.10%
+[02.05.26|00:43:42] Done.
+[02.05.26|00:43:42] Training epoch: 15
+[02.05.26|00:43:45] 	mean_loss: 1.510225788752238
+[02.05.26|00:43:45] Time consumption:
+[02.05.26|00:43:45] Done.
+[02.05.26|00:43:45] Training epoch: 16
+[02.05.26|00:43:47] 	mean_loss: 1.4483917951583862
+[02.05.26|00:43:47] Time consumption:
+[02.05.26|00:43:47] Done.
+[02.05.26|00:43:47] Training epoch: 17
+[02.05.26|00:43:50] 	mean_loss: 1.3225138425827025
+[02.05.26|00:43:50] Time consumption:
+[02.05.26|00:43:50] Done.
+[02.05.26|00:43:50] Training epoch: 18
+[02.05.26|00:43:52] 	mean_loss: 1.4689201354980468
+[02.05.26|00:43:52] Time consumption:
+[02.05.26|00:43:52] Done.
+[02.05.26|00:43:52] Training epoch: 19
+[02.05.26|00:43:55] 	mean_loss: 1.3054387013117472
+[02.05.26|00:43:55] Time consumption:
+[02.05.26|00:43:55] Done.
+[02.05.26|00:43:55] The model has been saved as ./work_dir/recognition/eduaction/ST_GCN/epoch20_model.pt.
+[02.05.26|00:43:55] Eval epoch: 19
+[02.05.26|00:43:56] 	mean_loss: 1.3209772791181291
+[02.05.26|00:43:56] 	Top1: 40.00%
+[02.05.26|00:43:56] 	Top5: 99.05%
+[02.05.26|00:43:56] Done.
+[02.05.26|00:43:56] Training epoch: 20
+[02.05.26|00:43:57] 	Iter 300 Done. | loss: 1.1142 | lr: 0.010000
+[02.05.26|00:43:59] 	mean_loss: 1.2797618667284647
+[02.05.26|00:43:59] Time consumption:
+[02.05.26|00:43:59] Done.
+[02.05.26|00:43:59] Training epoch: 21
+[02.05.26|00:44:01] 	mean_loss: 1.3081110954284667
+[02.05.26|00:44:01] Time consumption:
+[02.05.26|00:44:01] Done.
+[02.05.26|00:44:01] Training epoch: 22
+[02.05.26|00:44:04] 	mean_loss: 1.1611334482828777
+[02.05.26|00:44:04] Time consumption:
+[02.05.26|00:44:04] Done.
+[02.05.26|00:44:04] Training epoch: 23
+[02.05.26|00:44:06] 	mean_loss: 1.1836381395657858
+[02.05.26|00:44:06] Time consumption:
+[02.05.26|00:44:06] Done.
+[02.05.26|00:44:06] Training epoch: 24
+[02.05.26|00:44:09] 	mean_loss: 1.1444895148277283
+[02.05.26|00:44:09] Time consumption:
+[02.05.26|00:44:09] Done.
+[02.05.26|00:44:09] Eval epoch: 24
+[02.05.26|00:44:10] 	mean_loss: 1.2658518212182182
+[02.05.26|00:44:10] 	Top1: 52.38%
+[02.05.26|00:44:10] 	Top5: 98.10%
+[02.05.26|00:44:10] Done.
+[02.05.26|00:44:10] Training epoch: 25
+[02.05.26|00:44:12] 	mean_loss: 1.0908241430918375
+[02.05.26|00:44:12] Time consumption:
+[02.05.26|00:44:12] Done.
+[02.05.26|00:44:12] Training epoch: 26
+[02.05.26|00:44:14] 	Iter 400 Done. | loss: 0.8655 | lr: 0.010000
+[02.05.26|00:44:15] 	mean_loss: 1.064323898156484
+[02.05.26|00:44:15] Time consumption:
+[02.05.26|00:44:15] Done.
+[02.05.26|00:44:15] Training epoch: 27
+[02.05.26|00:44:17] 	mean_loss: 1.0504814704259238
+[02.05.26|00:44:17] Time consumption:
+[02.05.26|00:44:17] Done.
+[02.05.26|00:44:17] Training epoch: 28
+[02.05.26|00:44:20] 	mean_loss: 1.0706614216168722
+[02.05.26|00:44:20] Time consumption:
+[02.05.26|00:44:20] Done.
+[02.05.26|00:44:20] Training epoch: 29
+[02.05.26|00:44:22] 	mean_loss: 0.9514343460400899
+[02.05.26|00:44:22] Time consumption:
+[02.05.26|00:44:22] Done.
+[02.05.26|00:44:23] The model has been saved as ./work_dir/recognition/eduaction/ST_GCN/epoch30_model.pt.
+[02.05.26|00:44:23] Eval epoch: 29
+[02.05.26|00:44:23] 	mean_loss: 1.2204312426703317
+[02.05.26|00:44:23] 	Top1: 58.10%
+[02.05.26|00:44:23] 	Top5: 97.14%
+[02.05.26|00:44:23] Done.
+[02.05.26|00:44:23] Training epoch: 30
+[02.05.26|00:44:26] 	mean_loss: 1.0071117480595906
+[02.05.26|00:44:26] Time consumption:
+[02.05.26|00:44:26] Done.
+[02.05.26|00:44:26] Training epoch: 31
+[02.05.26|00:44:28] 	mean_loss: 0.9531143029530843
+[02.05.26|00:44:28] Time consumption:
+[02.05.26|00:44:28] Done.
+[02.05.26|00:44:28] Training epoch: 32
+[02.05.26|00:44:31] 	mean_loss: 1.071816345055898
+[02.05.26|00:44:31] Time consumption:
+[02.05.26|00:44:31] Done.
+[02.05.26|00:44:31] Training epoch: 33
+[02.05.26|00:44:32] 	Iter 500 Done. | loss: 0.6976 | lr: 0.010000
+[02.05.26|00:44:34] 	mean_loss: 1.0026848077774049
+[02.05.26|00:44:34] Time consumption:
+[02.05.26|00:44:34] Done.
+[02.05.26|00:44:34] Training epoch: 34
+[02.05.26|00:44:36] 	mean_loss: 1.0015589992205303
+[02.05.26|00:44:36] Time consumption:
+[02.05.26|00:44:36] Done.
+[02.05.26|00:44:36] Eval epoch: 34
+[02.05.26|00:44:37] 	mean_loss: 1.1113742249352592
+[02.05.26|00:44:37] 	Top1: 63.81%
+[02.05.26|00:44:37] 	Top5: 98.10%
+[02.05.26|00:44:37] Done.
+[02.05.26|00:44:37] Training epoch: 35
+[02.05.26|00:44:39] 	mean_loss: 0.93736732006073
+[02.05.26|00:44:39] Time consumption:
+[02.05.26|00:44:39] Done.
+[02.05.26|00:44:39] Training epoch: 36
+[02.05.26|00:44:42] 	mean_loss: 1.033938463528951
+[02.05.26|00:44:42] Time consumption:
+[02.05.26|00:44:42] Done.
+[02.05.26|00:44:42] Training epoch: 37
+[02.05.26|00:44:44] 	mean_loss: 0.8780287841955821
+[02.05.26|00:44:44] Time consumption:
+[02.05.26|00:44:44] Done.
+[02.05.26|00:44:45] Training epoch: 38
+[02.05.26|00:44:47] 	mean_loss: 0.8581906278928121
+[02.05.26|00:44:47] Time consumption:
+[02.05.26|00:44:47] Done.
+[02.05.26|00:44:47] Training epoch: 39
+[02.05.26|00:44:50] 	mean_loss: 0.7734784682591757
+[02.05.26|00:44:50] Time consumption:
+[02.05.26|00:44:50] Done.
+[02.05.26|00:44:50] The model has been saved as ./work_dir/recognition/eduaction/ST_GCN/epoch40_model.pt.
+[02.05.26|00:44:50] Eval epoch: 39
+[02.05.26|00:44:51] 	mean_loss: 1.0778005761759621
+[02.05.26|00:44:51] 	Top1: 70.48%
+[02.05.26|00:44:51] 	Top5: 98.10%
+[02.05.26|00:44:51] Done.
+[02.05.26|00:44:51] Training epoch: 40
+[02.05.26|00:44:51] 	Iter 600 Done. | loss: 0.5678 | lr: 0.001000
+[02.05.26|00:44:53] 	mean_loss: 0.8906202554702759
+[02.05.26|00:44:53] Time consumption:
+[02.05.26|00:44:53] Done.
+[02.05.26|00:44:53] Training epoch: 41
+[02.05.26|00:44:56] 	mean_loss: 0.9090728123982748
+[02.05.26|00:44:56] Time consumption:
+[02.05.26|00:44:56] Done.
+[02.05.26|00:44:56] Training epoch: 42
+[02.05.26|00:44:58] 	mean_loss: 0.6735706865787506
+[02.05.26|00:44:58] Time consumption:
+[02.05.26|00:44:58] Done.
+[02.05.26|00:44:59] Training epoch: 43
+[02.05.26|00:45:01] 	mean_loss: 0.6986990491549174
+[02.05.26|00:45:01] Time consumption:
+[02.05.26|00:45:01] Done.
+[02.05.26|00:45:01] Training epoch: 44
+[02.05.26|00:45:04] 	mean_loss: 0.6462759892145793
+[02.05.26|00:45:04] Time consumption:
+[02.05.26|00:45:04] Done.
+[02.05.26|00:45:04] Eval epoch: 44
+[02.05.26|00:45:04] 	mean_loss: 1.018788652760642
+[02.05.26|00:45:04] 	Top1: 67.62%
+[02.05.26|00:45:04] 	Top5: 97.14%
+[02.05.26|00:45:04] Done.
+[02.05.26|00:45:04] Training epoch: 45
+[02.05.26|00:45:07] 	mean_loss: 0.6493097702662151
+[02.05.26|00:45:07] Time consumption:
+[02.05.26|00:45:07] Done.
+[02.05.26|00:45:07] Training epoch: 46
+[02.05.26|00:45:09] 	Iter 700 Done. | loss: 0.7419 | lr: 0.001000
+[02.05.26|00:45:09] 	mean_loss: 0.7127543648084005
+[02.05.26|00:45:10] Time consumption:
+[02.05.26|00:45:10] Done.
+[02.05.26|00:45:10] Training epoch: 47
+[02.05.26|00:45:12] 	mean_loss: 0.6683185517787933
+[02.05.26|00:45:12] Time consumption:
+[02.05.26|00:45:12] Done.
+[02.05.26|00:45:12] Training epoch: 48
+[02.05.26|00:45:15] 	mean_loss: 0.6573850790659587
+[02.05.26|00:45:15] Time consumption:
+[02.05.26|00:45:15] Done.
+[02.05.26|00:45:15] Training epoch: 49
+[02.05.26|00:45:17] 	mean_loss: 0.6659126122792561
+[02.05.26|00:45:17] Time consumption:
+[02.05.26|00:45:17] Done.
+[02.05.26|00:45:18] The model has been saved as ./work_dir/recognition/eduaction/ST_GCN/epoch50_model.pt.
+[02.05.26|00:45:18] Eval epoch: 49
+[02.05.26|00:45:18] 	mean_loss: 0.9798513693468911
+[02.05.26|00:45:18] 	Top1: 66.67%
+[02.05.26|00:45:18] 	Top5: 98.10%
+[02.05.26|00:45:18] Done.
+[02.05.26|00:45:18] Training epoch: 50
+[02.05.26|00:45:21] 	mean_loss: 0.7375802000363668
+[02.05.26|00:45:21] Time consumption:
+[02.05.26|00:45:21] Done.
+[02.05.26|00:45:21] Training epoch: 51
+[02.05.26|00:45:24] 	mean_loss: 0.6549205164114634
+[02.05.26|00:45:24] Time consumption:
+[02.05.26|00:45:24] Done.
+[02.05.26|00:45:24] Training epoch: 52
+[02.05.26|00:45:26] 	mean_loss: 0.6449443995952606
+[02.05.26|00:45:26] Time consumption:
+[02.05.26|00:45:26] Done.
+[02.05.26|00:45:26] Training epoch: 53
+[02.05.26|00:45:27] 	Iter 800 Done. | loss: 0.4053 | lr: 0.001000
+[02.05.26|00:45:29] 	mean_loss: 0.6150040745735168
+[02.05.26|00:45:29] Time consumption:
+[02.05.26|00:45:29] Done.
+[02.05.26|00:45:29] Training epoch: 54
+[02.05.26|00:45:31] 	mean_loss: 0.7410254955291748
+[02.05.26|00:45:31] Time consumption:
+[02.05.26|00:45:31] Done.
+[02.05.26|00:45:31] Eval epoch: 54
+[02.05.26|00:45:32] 	mean_loss: 0.9798571722848075
+[02.05.26|00:45:32] 	Top1: 66.67%
+[02.05.26|00:45:32] 	Top5: 98.10%
+[02.05.26|00:45:32] Done.
+[02.05.26|00:45:32] Training epoch: 55
+[02.05.26|00:45:35] 	mean_loss: 0.7291183114051819
+[02.05.26|00:45:35] Time consumption:
+[02.05.26|00:45:35] Done.
+[02.05.26|00:45:35] Training epoch: 56
+[02.05.26|00:45:37] 	mean_loss: 0.7372026364008586
+[02.05.26|00:45:37] Time consumption:
+[02.05.26|00:45:37] Done.
+[02.05.26|00:45:37] Training epoch: 57
+[02.05.26|00:45:40] 	mean_loss: 0.5922984798749288
+[02.05.26|00:45:40] Time consumption:
+[02.05.26|00:45:40] Done.
+[02.05.26|00:45:40] Training epoch: 58
+[02.05.26|00:45:43] 	mean_loss: 0.6126084625720978
+[02.05.26|00:45:43] Time consumption:
+[02.05.26|00:45:43] Done.
+[02.05.26|00:45:43] Training epoch: 59
+[02.05.26|00:45:45] 	mean_loss: 0.714603716135025
+[02.05.26|00:45:45] Time consumption:
+[02.05.26|00:45:45] Done.
+[02.05.26|00:45:46] The model has been saved as ./work_dir/recognition/eduaction/ST_GCN/epoch60_model.pt.
+[02.05.26|00:45:46] Eval epoch: 59
+[02.05.26|00:45:46] 	mean_loss: 0.9910944955689567
+[02.05.26|00:45:46] 	Top1: 69.52%
+[02.05.26|00:45:46] 	Top5: 98.10%
+[02.05.26|00:45:46] Done.
+[02.05.26|00:45:46] Training epoch: 60
+[02.05.26|00:45:47] 	Iter 900 Done. | loss: 0.4225 | lr: 0.000100
+[02.05.26|00:45:49] 	mean_loss: 0.6769293189048767
+[02.05.26|00:45:49] Time consumption:
+[02.05.26|00:45:49] Done.
+[02.05.26|00:45:49] Training epoch: 61
+[02.05.26|00:45:52] 	mean_loss: 0.7103553950786591
+[02.05.26|00:45:52] Time consumption:
+[02.05.26|00:45:52] Done.
+[02.05.26|00:45:52] Training epoch: 62
+[02.05.26|00:45:54] 	mean_loss: 0.6693130234877268
+[02.05.26|00:45:54] Time consumption:
+[02.05.26|00:45:54] Done.
+[02.05.26|00:45:54] Training epoch: 63
+[02.05.26|00:45:57] 	mean_loss: 0.5908480743567149
+[02.05.26|00:45:57] Time consumption:
+[02.05.26|00:45:57] Done.
+[02.05.26|00:45:57] Training epoch: 64
+[02.05.26|00:45:59] 	mean_loss: 0.5548737068970998
+[02.05.26|00:45:59] Time consumption:
+[02.05.26|00:45:59] Done.
+[02.05.26|00:45:59] Eval epoch: 64
+[02.05.26|00:46:00] 	mean_loss: 0.9892748849732536
+[02.05.26|00:46:00] 	Top1: 70.48%
+[02.05.26|00:46:00] 	Top5: 98.10%
+[02.05.26|00:46:00] Done.
+[02.05.26|00:46:00] Training epoch: 65
+[02.05.26|00:46:03] 	mean_loss: 0.5870355606079102
+[02.05.26|00:46:03] Time consumption:
+[02.05.26|00:46:03] Done.
+[02.05.26|00:46:03] Training epoch: 66
+[02.05.26|00:46:05] 	Iter 1000 Done. | loss: 0.6639 | lr: 0.000100
+[02.05.26|00:46:05] 	mean_loss: 0.6438456376393636
+[02.05.26|00:46:05] Time consumption:
+[02.05.26|00:46:05] Done.
+[02.05.26|00:46:05] Training epoch: 67
+[02.05.26|00:46:08] 	mean_loss: 0.7256700654824575
+[02.05.26|00:46:08] Time consumption:
+[02.05.26|00:46:08] Done.
+[02.05.26|00:46:08] Training epoch: 68
+[02.05.26|00:46:10] 	mean_loss: 0.6348748584588368
+[02.05.26|00:46:10] Time consumption:
+[02.05.26|00:46:10] Done.
+[02.05.26|00:46:10] Training epoch: 69
+[02.05.26|00:46:13] 	mean_loss: 0.6815015693505605
+[02.05.26|00:46:13] Time consumption:
+[02.05.26|00:46:13] Done.
+[02.05.26|00:46:13] The model has been saved as ./work_dir/recognition/eduaction/ST_GCN/epoch70_model.pt.
+[02.05.26|00:46:13] Eval epoch: 69
+[02.05.26|00:46:14] 	mean_loss: 1.005649481500898
+[02.05.26|00:46:14] 	Top1: 67.62%
+[02.05.26|00:46:14] 	Top5: 98.10%
+[02.05.26|00:46:14] Done.
+[02.05.26|00:46:14] Training epoch: 70
+[02.05.26|00:46:16] 	mean_loss: 0.6760664423306783
+[02.05.26|00:46:16] Time consumption:
+[02.05.26|00:46:16] Done.
+[02.05.26|00:46:16] Training epoch: 71
+[02.05.26|00:46:19] 	mean_loss: 0.5510068893432617
+[02.05.26|00:46:19] Time consumption:
+[02.05.26|00:46:19] Done.
+[02.05.26|00:46:19] Training epoch: 72
+[02.05.26|00:46:22] 	mean_loss: 0.6180298765500386
+[02.05.26|00:46:22] Time consumption:
+[02.05.26|00:46:22] Done.
+[02.05.26|00:46:22] Training epoch: 73
+[02.05.26|00:46:23] 	Iter 1100 Done. | loss: 0.6867 | lr: 0.000100
+[02.05.26|00:46:24] 	mean_loss: 0.6036859035491944
+[02.05.26|00:46:24] Time consumption:
+[02.05.26|00:46:24] Done.
+[02.05.26|00:46:24] Training epoch: 74
+[02.05.26|00:46:27] 	mean_loss: 0.6397399048010508
+[02.05.26|00:46:27] Time consumption:
+[02.05.26|00:46:27] Done.
+[02.05.26|00:46:27] Eval epoch: 74
+[02.05.26|00:46:27] 	mean_loss: 0.9930428309100015
+[02.05.26|00:46:27] 	Top1: 70.48%
+[02.05.26|00:46:27] 	Top5: 98.10%
+[02.05.26|00:46:27] Done.
+[02.05.26|00:46:27] Training epoch: 75
+[02.05.26|00:46:30] 	mean_loss: 0.6155600647131602
+[02.05.26|00:46:30] Time consumption:
+[02.05.26|00:46:30] Done.
+[02.05.26|00:46:30] Training epoch: 76
+[02.05.26|00:46:32] 	mean_loss: 0.5651583035786947
+[02.05.26|00:46:32] Time consumption:
+[02.05.26|00:46:33] Done.
+[02.05.26|00:46:33] Training epoch: 77
+[02.05.26|00:46:35] 	mean_loss: 0.5737619519233703
+[02.05.26|00:46:35] Time consumption:
+[02.05.26|00:46:35] Done.
+[02.05.26|00:46:35] Training epoch: 78
+[02.05.26|00:46:38] 	mean_loss: 0.5819307744503022
+[02.05.26|00:46:38] Time consumption:
+[02.05.26|00:46:38] Done.
+[02.05.26|00:46:38] Training epoch: 79
+[02.05.26|00:46:40] 	mean_loss: 0.694788004954656
+[02.05.26|00:46:40] Time consumption:
+[02.05.26|00:46:40] Done.
+[02.05.26|00:46:40] The model has been saved as ./work_dir/recognition/eduaction/ST_GCN/epoch80_model.pt.
+[02.05.26|00:46:41] Eval epoch: 79
+[02.05.26|00:46:41] 	mean_loss: 0.9784067698887416
+[02.05.26|00:46:41] 	Top1: 71.43%
+[02.05.26|00:46:41] 	Top5: 98.10%
+[02.05.26|00:46:41] Done.
+[02.05.26|00:46:41] Training epoch: 80
+[02.05.26|00:46:42] 	Iter 1200 Done. | loss: 0.6903 | lr: 0.000010
+[02.05.26|00:46:44] 	mean_loss: 0.6166361103455226
+[02.05.26|00:46:44] Time consumption:
+[02.05.26|00:46:44] Done.
+[02.05.26|00:46:44] Training epoch: 81
+[02.05.26|00:46:46] 	mean_loss: 0.6294998983542125
+[02.05.26|00:46:46] Time consumption:
+[02.05.26|00:46:46] Done.
+[02.05.26|00:46:47] Training epoch: 82
+[02.05.26|00:46:49] 	mean_loss: 0.6296924928824107
+[02.05.26|00:46:49] Time consumption:
+[02.05.26|00:46:49] Done.
+[02.05.26|00:46:49] Training epoch: 83
+[02.05.26|00:46:52] 	mean_loss: 0.643491514523824
+[02.05.26|00:46:52] Time consumption:
+[02.05.26|00:46:52] Done.
+[02.05.26|00:46:52] Training epoch: 84
+[02.05.26|00:46:54] 	mean_loss: 0.6908304830392201
+[02.05.26|00:46:54] Time consumption:
+[02.05.26|00:46:54] Done.
+[02.05.26|00:46:54] Eval epoch: 84
+[02.05.26|00:46:55] 	mean_loss: 0.9896188080310822
+[02.05.26|00:46:55] 	Top1: 70.48%
+[02.05.26|00:46:55] 	Top5: 98.10%
+[02.05.26|00:46:55] Done.
+[02.05.26|00:46:55] Training epoch: 85
+[02.05.26|00:46:58] 	mean_loss: 0.561180579662323
+[02.05.26|00:46:58] Time consumption:
+[02.05.26|00:46:58] Done.
+[02.05.26|00:46:58] Training epoch: 86
+[02.05.26|00:47:00] 	Iter 1300 Done. | loss: 1.0363 | lr: 0.000010
+[02.05.26|00:47:00] 	mean_loss: 0.5936675051848094
+[02.05.26|00:47:00] Time consumption:
+[02.05.26|00:47:00] Done.
+[02.05.26|00:47:00] Training epoch: 87
+[02.05.26|00:47:03] 	mean_loss: 0.6316196620464325
+[02.05.26|00:47:03] Time consumption:
+[02.05.26|00:47:03] Done.
+[02.05.26|00:47:03] Training epoch: 88
+[02.05.26|00:47:05] 	mean_loss: 0.6925421476364135
+[02.05.26|00:47:05] Time consumption:
+[02.05.26|00:47:05] Done.
+[02.05.26|00:47:05] Training epoch: 89
+[02.05.26|00:47:08] 	mean_loss: 0.6324081132809322
+[02.05.26|00:47:08] Time consumption:
+[02.05.26|00:47:08] Done.
+[02.05.26|00:47:08] The model has been saved as ./work_dir/recognition/eduaction/ST_GCN/epoch90_model.pt.
+[02.05.26|00:47:08] Eval epoch: 89
+[02.05.26|00:47:09] 	mean_loss: 1.0121527782508306
+[02.05.26|00:47:09] 	Top1: 70.48%
+[02.05.26|00:47:09] 	Top5: 98.10%
+[02.05.26|00:47:09] Done.
+[02.05.26|00:47:09] Training epoch: 90
+[02.05.26|00:47:12] 	mean_loss: 0.6057209074497223
+[02.05.26|00:47:12] Time consumption:
+[02.05.26|00:47:12] Done.
+[02.05.26|00:47:12] Training epoch: 91
+[02.05.26|00:47:14] 	mean_loss: 0.5370514432589213
+[02.05.26|00:47:14] Time consumption:
+[02.05.26|00:47:14] Done.
+[02.05.26|00:47:14] Training epoch: 92
+[02.05.26|00:47:17] 	mean_loss: 0.6369398554166158
+[02.05.26|00:47:17] Time consumption:
+[02.05.26|00:47:17] Done.
+[02.05.26|00:47:17] Training epoch: 93
+[02.05.26|00:47:18] 	Iter 1400 Done. | loss: 0.4111 | lr: 0.000010
+[02.05.26|00:47:20] 	mean_loss: 0.5952179213364919
+[02.05.26|00:47:20] Time consumption:
+[02.05.26|00:47:20] Done.
+[02.05.26|00:47:20] Training epoch: 94
+[02.05.26|00:47:22] 	mean_loss: 0.6261084496974945
+[02.05.26|00:47:22] Time consumption:
+[02.05.26|00:47:22] Done.
+[02.05.26|00:47:22] Eval epoch: 94
+[02.05.26|00:47:23] 	mean_loss: 0.9869530924728939
+[02.05.26|00:47:23] 	Top1: 68.57%
+[02.05.26|00:47:23] 	Top5: 98.10%
+[02.05.26|00:47:23] Done.
+[02.05.26|00:47:23] Training epoch: 95
+[02.05.26|00:47:26] 	mean_loss: 0.685009382168452
+[02.05.26|00:47:26] Time consumption:
+[02.05.26|00:47:26] Done.
+[02.05.26|00:47:26] Training epoch: 96
+[02.05.26|00:47:28] 	mean_loss: 0.5822348376115163
+[02.05.26|00:47:28] Time consumption:
+[02.05.26|00:47:28] Done.
+[02.05.26|00:47:28] Training epoch: 97
+[02.05.26|00:47:31] 	mean_loss: 0.6197639842828114
+[02.05.26|00:47:31] Time consumption:
+[02.05.26|00:47:31] Done.
+[02.05.26|00:47:31] Training epoch: 98
+[02.05.26|00:47:33] 	mean_loss: 0.5765577256679535
+[02.05.26|00:47:33] Time consumption:
+[02.05.26|00:47:33] Done.
+[02.05.26|00:47:33] Training epoch: 99
+[02.05.26|00:47:36] 	mean_loss: 0.6230071047941844
+[02.05.26|00:47:36] Time consumption:
+[02.05.26|00:47:36] Done.
+[02.05.26|00:47:36] The model has been saved as ./work_dir/recognition/eduaction/ST_GCN/epoch100_model.pt.
+[02.05.26|00:47:36] Eval epoch: 99
+[02.05.26|00:47:37] 	mean_loss: 1.0005957654544286
+[02.05.26|00:47:37] 	Top1: 68.57%
+[02.05.26|00:47:37] 	Top5: 98.10%
+[02.05.26|00:47:37] Done.
+[02.05.26|00:47:37] Training epoch: 100
+[02.05.26|00:47:38] 	Iter 1500 Done. | loss: 0.6515 | lr: 0.000010
+[02.05.26|00:47:40] 	mean_loss: 0.6717036426067352
+[02.05.26|00:47:40] Time consumption:
+[02.05.26|00:47:40] Done.
+[02.05.26|00:47:40] Training epoch: 101
+[02.05.26|00:47:42] 	mean_loss: 0.5619157791137696
+[02.05.26|00:47:42] Time consumption:
+[02.05.26|00:47:42] Done.
+[02.05.26|00:47:42] Training epoch: 102
+[02.05.26|00:47:45] 	mean_loss: 0.6906610171000163
+[02.05.26|00:47:45] Time consumption:
+[02.05.26|00:47:45] Done.
+[02.05.26|00:47:45] Training epoch: 103
+[02.05.26|00:47:48] 	mean_loss: 0.5580040494600932
+[02.05.26|00:47:48] Time consumption:
+[02.05.26|00:47:48] Done.
+[02.05.26|00:47:48] Training epoch: 104
+[02.05.26|00:47:50] 	mean_loss: 0.623402601480484
+[02.05.26|00:47:50] Time consumption:
+[02.05.26|00:47:50] Done.
+[02.05.26|00:47:50] Eval epoch: 104
+[02.05.26|00:47:51] 	mean_loss: 0.9794033169746399
+[02.05.26|00:47:51] 	Top1: 71.43%
+[02.05.26|00:47:51] 	Top5: 98.10%
+[02.05.26|00:47:51] Done.
+[02.05.26|00:47:51] Training epoch: 105
+[02.05.26|00:47:54] 	mean_loss: 0.6249961872895559
+[02.05.26|00:47:54] Time consumption:
+[02.05.26|00:47:54] Done.
+[02.05.26|00:47:54] Training epoch: 106
+[02.05.26|00:47:56] 	Iter 1600 Done. | loss: 0.5668 | lr: 0.000010
+[02.05.26|00:47:56] 	mean_loss: 0.6084633429845174
+[02.05.26|00:47:56] Time consumption:
+[02.05.26|00:47:56] Done.
+[02.05.26|00:47:56] Training epoch: 107
+[02.05.26|00:47:59] 	mean_loss: 0.5901351193586986
+[02.05.26|00:47:59] Time consumption:
+[02.05.26|00:47:59] Done.
+[02.05.26|00:47:59] Training epoch: 108
+[02.05.26|00:48:01] 	mean_loss: 0.7492956538995107
+[02.05.26|00:48:01] Time consumption:
+[02.05.26|00:48:01] Done.
+[02.05.26|00:48:01] Training epoch: 109
+[02.05.26|00:48:04] 	mean_loss: 0.633305694659551
+[02.05.26|00:48:04] Time consumption:
+[02.05.26|00:48:04] Done.
+[02.05.26|00:48:04] The model has been saved as ./work_dir/recognition/eduaction/ST_GCN/epoch110_model.pt.
+[02.05.26|00:48:04] Eval epoch: 109
+[02.05.26|00:48:05] 	mean_loss: 0.9790735713073185
+[02.05.26|00:48:05] 	Top1: 69.52%
+[02.05.26|00:48:05] 	Top5: 98.10%
+[02.05.26|00:48:05] Done.
+[02.05.26|00:48:05] Training epoch: 110
+[02.05.26|00:48:08] 	mean_loss: 0.5507163812716802
+[02.05.26|00:48:08] Time consumption:
+[02.05.26|00:48:08] Done.
+[02.05.26|00:48:08] Training epoch: 111
+[02.05.26|00:48:10] 	mean_loss: 0.6715768853823344
+[02.05.26|00:48:10] Time consumption:
+[02.05.26|00:48:10] Done.
+[02.05.26|00:48:10] Training epoch: 112
+[02.05.26|00:48:13] 	mean_loss: 0.5988459845383962
+[02.05.26|00:48:13] Time consumption:
+[02.05.26|00:48:13] Done.
+[02.05.26|00:48:13] Training epoch: 113
+[02.05.26|00:48:14] 	Iter 1700 Done. | loss: 0.6403 | lr: 0.000010
+[02.05.26|00:48:15] 	mean_loss: 0.6124694208304088
+[02.05.26|00:48:15] Time consumption:
+[02.05.26|00:48:15] Done.
+[02.05.26|00:48:15] Training epoch: 114
+[02.05.26|00:48:18] 	mean_loss: 0.5617446959018707
+[02.05.26|00:48:18] Time consumption:
+[02.05.26|00:48:18] Done.
+[02.05.26|00:48:18] Eval epoch: 114
+[02.05.26|00:48:18] 	mean_loss: 0.9848283742155347
+[02.05.26|00:48:18] 	Top1: 70.48%
+[02.05.26|00:48:18] 	Top5: 98.10%
+[02.05.26|00:48:19] Done.
+[02.05.26|00:48:19] Training epoch: 115
+[02.05.26|00:48:21] 	mean_loss: 0.6495340625445049
+[02.05.26|00:48:21] Time consumption:
+[02.05.26|00:48:21] Done.
+[02.05.26|00:48:21] Training epoch: 116
+[02.05.26|00:48:24] 	mean_loss: 0.5876448591550191
+[02.05.26|00:48:24] Time consumption:
+[02.05.26|00:48:24] Done.
+[02.05.26|00:48:24] Training epoch: 117
+[02.05.26|00:48:26] 	mean_loss: 0.5892089943091074
+[02.05.26|00:48:26] Time consumption:
+[02.05.26|00:48:26] Done.
+[02.05.26|00:48:26] Training epoch: 118
+[02.05.26|00:48:29] 	mean_loss: 0.6672583480676015
+[02.05.26|00:48:29] Time consumption:
+[02.05.26|00:48:29] Done.
+[02.05.26|00:48:29] Training epoch: 119
+[02.05.26|00:48:31] 	mean_loss: 0.5650952696800232
+[02.05.26|00:48:31] Time consumption:
+[02.05.26|00:48:31] Done.
+[02.05.26|00:48:32] The model has been saved as ./work_dir/recognition/eduaction/ST_GCN/epoch120_model.pt.
+[02.05.26|00:48:32] Eval epoch: 119
+[02.05.26|00:48:32] 	mean_loss: 0.9773618919508797
+[02.05.26|00:48:32] 	Top1: 68.57%
+[02.05.26|00:48:32] 	Top5: 98.10%
+[02.05.26|00:48:32] Done.

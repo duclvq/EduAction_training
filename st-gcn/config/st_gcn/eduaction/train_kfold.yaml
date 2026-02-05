@@ -1,0 +1,53 @@
+# K-Fold Cross Validation Config for ST-GCN on EduAction (Full Body - 133 keypoints)
+# All random seeds are fixed for reproducibility
+
+# Work directory
+work_dir: ./work_dir/recognition/eduaction_kfold/ST_GCN
+
+# K-Fold settings
+n_folds: 5
+seed: 42  # Master seed for reproducibility
+
+# Data settings
+data_dir: /mnt/d/data/EduAction_pose_data
+keypoint_subset: full_body  # 133 keypoints
+window_size: 64
+
+# Data augmentation (deterministic with seed)
+random_choose: true
+random_move: true
+
+# Model
+model_args:
+  in_channels: 2
+  num_class: 7
+  dropout: 0.5
+  edge_importance_weighting: true
+  graph_args:
+    layout: eduaction
+    strategy: spatial
+
+# Training
+num_epoch: 120
+batch_size: 16
+test_batch_size: 16
+num_worker: 4
+
+# Optimizer
+optimizer: SGD
+base_lr: 0.01
+weight_decay: 0.0001
+nesterov: true
+step:
+  - 40
+  - 60
+  - 80
+
+# Logging
+eval_interval: 5
+save_interval: 10
+
+# Device
+use_gpu: true
+device:
+  - 0
