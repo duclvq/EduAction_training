@@ -1,0 +1,10 @@
+{
+  "n_folds": 5,
+  "seed": 42,
+  "keypoint_config": "upper_body",
+  "joint_n": 127,
+  "frame_l": 64,
+  "epochs": 120,
+  "batch_size": 16,
+  "learning_rate": 0.001
+}

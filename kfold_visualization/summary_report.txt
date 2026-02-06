@@ -1,0 +1,46 @@
+================================================================================
+K-FOLD CROSS VALIDATION SUMMARY REPORT
+EduAction Dataset - Action Recognition
+================================================================================
+
+EXPERIMENTAL SETTINGS:
+----------------------------------------
+- K-Fold: 5
+- Random Seed: 42
+- Window Size: 64 frames
+- Classes: 7 (drinking, lecture, play_phone, sleeping, talking, watch_computer, writing)
+- Total Samples: ~350
+
+RESULTS SUMMARY:
+----------------------------------------
+Model                     Mean Acc     Std        Time (min)  
+------------------------------------------------------------
+MGSAN Full Body              77.14%     1.81%      147.3
+MGSAN Upper Body             79.71%     1.67%       87.5
+ST-GCN Full Body             76.57%     2.65%       30.0
+ST-GCN Upper Body            71.14%     4.73%       27.5
+DDNet Full Body              74.29%     5.92%        6.9
+DDNet Upper Body             76.29%     5.08%        6.9
+
+================================================================================
+
+BEST RESULTS:
+----------------------------------------
+Best Full Body:  MGSAN Full Body (77.14%)
+Best Upper Body: MGSAN Upper Body (79.71%)
+Best Overall:    MGSAN Upper Body (79.71%)
+
+================================================================================
+
+PER-CLASS ACCURACY (Best Model - MGSAN Upper Body):
+----------------------------------------
+  drinking            :   92.0%
+  lecture             :   74.0%
+  play_phone          :   84.0%
+  sleeping            :   80.0%
+  talking             :   70.0%
+  watch_computer      :   78.0%
+  writing             :   80.0%
+
+Hardest class: talking (70.0%)
+Easiest class: drinking (92.0%)

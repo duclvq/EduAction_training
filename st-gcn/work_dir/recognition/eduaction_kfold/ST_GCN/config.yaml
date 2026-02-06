@@ -1,0 +1,33 @@
+base_lr: 0.01
+batch_size: 16
+data_dir: /mnt/d/data/EduAction_pose_data
+device:
+- 0
+eval_interval: 5
+keypoint_subset: full_body
+model_args:
+  dropout: 0.5
+  edge_importance_weighting: true
+  graph_args:
+    layout: eduaction
+    strategy: spatial
+  in_channels: 2
+  num_class: 7
+n_folds: 5
+nesterov: true
+num_epoch: 120
+num_worker: 4
+optimizer: SGD
+random_choose: true
+random_move: true
+save_interval: 10
+seed: 42
+step:
+- 40
+- 60
+- 80
+test_batch_size: 16
+use_gpu: true
+weight_decay: 0.0001
+window_size: 64
+work_dir: ./work_dir/recognition/eduaction_kfold/ST_GCN

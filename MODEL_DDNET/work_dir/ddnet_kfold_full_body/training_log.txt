@@ -1,0 +1,38 @@
+Training started: 2026-02-05 17:26:08.749316
+
+[Fold 1] Best Val Accuracy: 82.86%
+[Fold 2] Best Val Accuracy: 67.14%
+[Fold 3] Best Val Accuracy: 68.57%
+[Fold 4] Best Val Accuracy: 78.57%
+[Fold 5] Best Val Accuracy: 74.29%
+
+============================================================
+K-FOLD CROSS VALIDATION SUMMARY - DD-Net
+============================================================
+Folds: 5
+Seed: 42
+Keypoint config: full_body (133 keypoints)
+Total training time: 6.9 minutes
+
+FOLD RESULTS:
+  Fold 1: 82.86% (epoch 62)
+  Fold 2: 67.14% (epoch 16)
+  Fold 3: 68.57% (epoch 30)
+  Fold 4: 78.57% (epoch 58)
+  Fold 5: 74.29% (epoch 32)
+
+OVERALL:
+  Mean Accuracy: 74.29% (+/- 5.92%)
+  Min: 67.14%
+  Max: 82.86%
+
+PER-CLASS ACCURACY (averaged across folds):
+  drinking            : 84.00%
+  lecture             : 66.00%
+  play_phone          : 82.00%
+  sleeping            : 88.00%
+  talking             : 54.00%
+  watch_computer      : 70.00%
+  writing             : 76.00%
+
+============================================================

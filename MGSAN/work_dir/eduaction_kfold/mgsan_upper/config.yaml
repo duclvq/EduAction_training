@@ -1,4 +1,4 @@
-base_lr: 0.1
+base_lr: 0.01
 batch_size: 16
 data_dir: /mnt/d/data/EduAction_pose_data
 device:
