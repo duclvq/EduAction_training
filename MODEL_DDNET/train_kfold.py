@@ -81,6 +81,14 @@ KEYPOINT_CONFIGS = {
         'indices': list(range(23, 133)),
         'name': 'Face + Hands (110 keypoints)',
     },
+    'coco17': {
+        'indices': list(range(0, 17)),
+        'name': 'COCO-17 Body Joints (17 keypoints)',
+    },
+    'body_no_feet': {
+        'indices': list(range(0, 17)),
+        'name': 'Body Only 17 kp - MediaPipe (17 keypoints)',
+    },
 }
 
 

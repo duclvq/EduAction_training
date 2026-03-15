@@ -1,46 +1,48 @@
 ================================================================================
 K-FOLD CROSS VALIDATION SUMMARY REPORT
-EduAction Dataset - Action Recognition
+EduAction Dataset -- Action Recognition
 ================================================================================
 
-EXPERIMENTAL SETTINGS:
+Settings: 5-Fold | seed=42 | window=64 frames | 7 classes | ~320 videos
+
+Rank  Model                  Extractor      KP      Mean     Std    Time
+----------------------------------------------------------------------
+#1    ST-GCN MediaPipe (17kp) MediaPipe      17    80.57%   4.10%  103.4m
+#2    MGSAN MediaPipe (17kp) MediaPipe      17    80.57%   3.08%  218.2m
+#3    MGSAN MediaPipe (127kp) MediaPipe     127    79.71%   1.67%   87.5m
+#4    MGSAN ViTPose (17kp)   ViTPose        17    79.71%   1.67%  237.3m
+#5    ST-GCN ViTPose (17kp)  ViTPose        17    79.43%   3.68%  114.2m
+#6    MGSAN MediaPipe (133kp) MediaPipe     133    77.14%   1.81%  147.3m
+#7    DDNet ViTPose (17kp)   ViTPose        17    77.14%   4.78%    6.0m
+#8    ST-GCN MediaPipe (133kp) MediaPipe     133    76.57%   2.65%   30.0m
+#9    DDNet MediaPipe (127kp) MediaPipe     127    76.29%   5.08%    6.9m
+#10   DDNet MediaPipe (17kp) MediaPipe      17    76.00%   4.18%    2.8m
+#11   DDNet MediaPipe (133kp) MediaPipe     133    74.29%   5.92%    6.9m
+#12   ST-GCN MediaPipe (127kp) MediaPipe     127    71.14%   4.73%   27.5m
+
+Best Overall: ST-GCN MediaPipe (17kp)  ->  80.57% (+/-4.10%)
+
+
+BEST PER MODEL:
 ----------------------------------------
-- K-Fold: 5
-- Random Seed: 42
-- Window Size: 64 frames
-- Classes: 7 (drinking, lecture, play_phone, sleeping, talking, watch_computer, writing)
-- Total Samples: ~350
+  MGSAN   : MGSAN MediaPipe (17kp)  80.57%
+  ST-GCN  : ST-GCN MediaPipe (17kp)  80.57%
+  DDNet   : DDNet ViTPose (17kp)    77.14%
 
-RESULTS SUMMARY:
+
+17-JOINT COMPARISON (MediaPipe vs ViTPose):
+--------------------------------------------------
+
+
+PER-CLASS -- ST-GCN MediaPipe (17kp):
 ----------------------------------------
-Model                     Mean Acc     Std        Time (min)  
-------------------------------------------------------------
-MGSAN Full Body              77.14%     1.81%      147.3
-MGSAN Upper Body             79.71%     1.67%       87.5
-ST-GCN Full Body             76.57%     2.65%       30.0
-ST-GCN Upper Body            71.14%     4.73%       27.5
-DDNet Full Body              74.29%     5.92%        6.9
-DDNet Upper Body             76.29%     5.08%        6.9
+  drinking            :  88.0%  #################
+  lecture             :  86.0%  #################
+  sleeping            :  84.0%  ################
+  watch_computer      :  82.0%  ################
+  play_phone          :  82.0%  ################
+  writing             :  74.0%  ##############
+  talking             :  68.0%  #############
 
-================================================================================
-
-BEST RESULTS:
-----------------------------------------
-Best Full Body:  MGSAN Full Body (77.14%)
-Best Upper Body: MGSAN Upper Body (79.71%)
-Best Overall:    MGSAN Upper Body (79.71%)
-
-================================================================================
-
-PER-CLASS ACCURACY (Best Model - MGSAN Upper Body):
-----------------------------------------
-  drinking            :   92.0%
-  lecture             :   74.0%
-  play_phone          :   84.0%
-  sleeping            :   80.0%
-  talking             :   70.0%
-  watch_computer      :   78.0%
-  writing             :   80.0%
-
-Hardest class: talking (70.0%)
-Easiest class: drinking (92.0%)
+  Hardest: talking (68.0%)
+  Easiest: drinking (88.0%)

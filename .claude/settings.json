@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for cls in drinking lecture play_phone sleeping talking watch_computer writing)",
+      "Bash(do echo -n \"$cls: \")",
+      "Read(//d/data/EduAction-A-college-student-action-dataset-for-classroom-attention-estimation/**)",
+      "Bash(done)"
+    ],
+    "additionalDirectories": [
+      "d:\\py_source\\EduAction_training\\.git"
+    ]
+  }
+}

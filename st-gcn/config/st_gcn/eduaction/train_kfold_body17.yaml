@@ -1,0 +1,45 @@
+# K-Fold Cross Validation Config for ST-GCN on EduAction (Body-only 17 kp, MediaPipe)
+# Same 17 joints as COCO-17 but extracted by MediaPipe
+
+work_dir: ./work_dir/recognition/eduaction_body17_kfold/ST_GCN
+
+n_folds: 5
+seed: 42
+
+# Data settings — MediaPipe source
+data_dir: D:/data/EduAction_pose_data
+keypoint_subset: body_no_feet  # 17 kp (index 0-16)
+window_size: 64
+
+random_choose: true
+random_move: true
+
+model_args:
+  in_channels: 2
+  num_class: 7
+  dropout: 0.5
+  edge_importance_weighting: true
+  graph_args:
+    layout: eduaction_coco17  # same 17-node COCO skeleton
+    strategy: spatial
+
+num_epoch: 120
+batch_size: 16
+test_batch_size: 16
+num_worker: 4
+
+optimizer: SGD
+base_lr: 0.01
+weight_decay: 0.0001
+nesterov: true
+step:
+  - 40
+  - 60
+  - 80
+
+eval_interval: 5
+save_interval: 10
+
+use_gpu: true
+device:
+  - 0

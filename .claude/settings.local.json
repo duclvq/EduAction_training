@@ -3,7 +3,8 @@
     "allow": [
       "Bash(python:*)",
       "Bash(find:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(wc -l \"d:/py_source/EduAction_training/ViPose/datasets/label/\"*.txt)"
     ]
   }
 }

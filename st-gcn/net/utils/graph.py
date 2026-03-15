@@ -321,6 +321,23 @@ class Graph():
             
             self.edge = self_link + neighbor_link
             self.center = 0
+        elif layout == 'eduaction_coco17':
+            # COCO-17 body joints only (for ViPose extracted data)
+            self.num_node = 17
+            self_link = [(i, i) for i in range(self.num_node)]
+            neighbor_link = [
+                (0, 1), (0, 2), (1, 3), (2, 4),  # Head
+                (0, 5), (0, 6),  # Nose to shoulders
+                (5, 7), (7, 9),  # Left arm
+                (6, 8), (8, 10),  # Right arm
+                (5, 11), (6, 12),  # Shoulders to hips
+                (11, 12),  # Hip connection
+                (11, 13), (13, 15),  # Left leg
+                (12, 14), (14, 16),  # Right leg
+                (5, 6),  # Shoulder connection
+            ]
+            self.edge = self_link + neighbor_link
+            self.center = 0
         # elif layout=='customer settings'
         #     pass
         else:

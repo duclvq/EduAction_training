@@ -31,6 +31,7 @@ KEYPOINT_SUBSETS = {
     'body_hands': list(range(0, 23)) + list(range(91, 133)),
     'upper_body_hands': list(range(0, 11)) + list(range(91, 133)),
     'face_only': list(range(23, 91)),
+    'coco17': list(range(0, 17)),  # 17 COCO body joints (ViPose extraction)
 }
 
 

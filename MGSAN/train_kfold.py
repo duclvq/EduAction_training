@@ -24,7 +24,14 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader
-from collections import defaultdict
+
+
+
+def _worker_init_fn(worker_id):
+    """Module-level worker init for Windows multiprocessing compatibility."""
+    seed = torch.initial_seed() % (2**32)
+    np.random.seed(seed + worker_id)
+    random.seed(seed + worker_id)
 import time
 from datetime import datetime
 import csv
@@ -176,17 +183,13 @@ class KFoldTrainer:
         g = torch.Generator()
         g.manual_seed(self.config['seed'] + fold_idx)
 
-        def worker_init_fn(worker_id):
-            np.random.seed(self.config['seed'] + fold_idx + worker_id)
-            random.seed(self.config['seed'] + fold_idx + worker_id)
-
         train_loader = DataLoader(
             dataset=train_dataset,
             batch_size=self.config['batch_size'],
             shuffle=True,
             num_workers=self.config['num_worker'],
             drop_last=True,
-            worker_init_fn=worker_init_fn,
+            worker_init_fn=_worker_init_fn,
             generator=g,
             pin_memory=True,  # Faster GPU transfer for CUDA 12.x
         )

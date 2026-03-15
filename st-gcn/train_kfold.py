@@ -21,6 +21,13 @@ import json
 import random
 import numpy as np
 import torch
+
+
+def _worker_init_fn(worker_id):
+    """Module-level worker init for Windows multiprocessing compatibility."""
+    seed = torch.initial_seed() % (2**32)
+    np.random.seed(seed + worker_id)
+    random.seed(seed + worker_id)
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader
@@ -170,7 +177,7 @@ class KFoldTrainer:
             shuffle=True,
             num_workers=self.config['num_worker'],
             drop_last=True,
-            worker_init_fn=lambda w: np.random.seed(self.config['seed'] + fold_idx + w),
+            worker_init_fn=_worker_init_fn,
             generator=g,
         )
 

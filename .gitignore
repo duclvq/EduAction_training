@@ -1,9 +1,34 @@
+# Model weights
 **/*.pt
 **/*.h5
 **/*.ckpt
+
+# Logs
 **/*.log
+
+# Data
 **/*.csv
 **/*.zip
+**/*.pkl
 
+# Images & videos
+**/*.png
+**/*.jpg
+**/*.jpeg
+**/*.mp4
+**/*.avi
+**/*.txt
 
+# Python cache
+__pycache__/
+**/*.pyc
+
+# Training outputs
+**/work_dir/
+**/training_log.txt
+**/summary_report.txt
+
+# Visualization outputs
+kfold_visualization/
+vipose_visualization/
 

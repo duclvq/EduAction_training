@@ -24,6 +24,7 @@ KEYPOINT_SUBSETS = {
     'body_hands': list(range(0, 23)) + list(range(91, 133)),  # 65 keypoints
     'upper_body_hands': list(range(0, 11)) + list(range(91, 133)),  # 53 keypoints
     'face_only': list(range(23, 91)),  # 68 keypoints
+    'coco17': list(range(0, 17)),  # 17 COCO body joints (ViPose extraction)
 }
 
 
@@ -231,3 +232,9 @@ class GraphEduActionFaceOnly(GraphEduAction):
     """Face only - 68 keypoints."""
     def __init__(self, labeling_mode='spatial'):
         super().__init__(labeling_mode, 'face_only')
+
+
+class GraphEduActionCOCO17(GraphEduAction):
+    """COCO-17 body joints only (for ViPose extracted data)."""
+    def __init__(self, labeling_mode='spatial'):
+        super().__init__(labeling_mode, 'coco17')
